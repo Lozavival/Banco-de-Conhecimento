@@ -1,0 +1,19 @@
+{
+  "readableLineLength": false,
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "root",
+  "showInlineTitle": false,
+  "strictLineBreaks": true,
+  "showIndentGuide": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": false
+}
