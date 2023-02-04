@@ -1,5 +1,5 @@
 ---
-tags: python, unicamp, lógica
+tags: python, unicamp
 ---
 
 # Título

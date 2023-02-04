@@ -8,6 +8,9 @@ Descrição
 
 ---
 
+```toc
+```
+
 ## Pré-requisitos
 
 1. [Classes e Orientação a Objetos](35%20-%20Orientação%20a%20Objetos%20-%20Classes%20e%20Métodos)
@@ -22,6 +25,8 @@ Nesse momento, podemos nos utilizar, por exemplo, de esboços/rascunhos para as 
 É importante dar especial atenção aos models, para evitar que, futuramente, sejam necessárias mudanças significativas no banco de dados (para se adicionar ou remover atributos, por exemplo), visto que as views podem ser alteradas com maior impunidade ao andamento do projeto como um todo. Especialmente, dê atenção ao modelo dos susuários, pois qualquer alteração futura (ao longo do desenvolvimento) requer exclusão e recriação do banco de dados para ser aplicada.
 
 ## Estrutura Inicial do Django
+
+Aqui estão listados os comandos básicos e passos iniciais para se criar um projeto no Django. Para saber todos os comandos existentes com django-admin e manage.py, acesse a [documentação](https://docs.djangoproject.com/pt-br/4.1/ref/django-admin/).
 
 ### Instalação
 
@@ -198,7 +203,7 @@ admin.site.register(Filme)
 
 A partir desse ponto, já é possível adicionar novos objetos daquela classe, ou seja, novas entradas no banco de dados.
 
-#### Configurações adicionais
+#### \_\_str\_\_
 
 Para configurar como cada entrada será representada na lista de objetos da tela de administrador, devemos definir a função `__str__` da classe. 
 
@@ -214,6 +219,29 @@ class Filme(models.Model):
 
 Como isso não altera a estrutura do banco de dados, não é necessário efetuar uma migração.
 
+#### Chave Estrangeira
+
+Uma chave estrangeira é uma relação do tipo muitos-para-um, ou seja, é um campo utilizado para relacionar dois modelos. Para mais informações, acesse a [documentação](https://docs.djangoproject.com/pt-br/4.1/ref/models/fields/#foreignkey).
+
+Recomenda-se que a chave estrangeira seja o primeiro campo a ser criado quando se define um novo modelo, para evitar modificações futuras (a nova tabela já é conectada à outra desde sua criação).
+
+Para criar um campo do tipo Chave Estrangeira, precisamos passar três parâmetros>
+- o modelo com o qual será feita a relação, que deve receber uma string contendo o nome da classe que representa tal modelo;
+- `related_name`: campo a ser "criado" no modelo "original" para que possamos acessar (no [contexto](#Contextos)) todos os objetos do novo modelo relacionados a ele;
+- `on_delete`: qual comportamento de uma constraint SQL deve ser emulado quando o objeto referenciado na Chave Estrangeira é deletado.
+
+Por exemplo, caso desejemos criar um aplicativo de séries, precisaremos criar os modelos de série e episódio, e é trivial perceber que cada episódio só pode estar relacionado a uma única série, porém cada série pode possuir vários episódios. Assim, utilizamos uma Chave Estrangeira para representar tal relação:
+
+```python
+class Serie(models.Model):
+	...
+
+class Episodio(models.Model):
+	serie = models.ForeignKey("Serie", related_name='episodios', on_delete=models.CASCADE)
+```
+
+No exemplo acima, podemos acessar todos os episódios de uma série em um arquivo HTML pela tag `{{ serie.episodios.all }}`, por exemplo, e, se a série for deletada, todos os episódios também serão excluídos do banco de dados.
+
 ### Páginas
 
 Para criar uma página do site, é necessário configurar três coisas: o *URL* (link onde a página aparecerá), a *view* (o que acontece quando acessar a página) e o *template* (parte visual que será exibida, ou seja, os arquivos HTML).
@@ -224,18 +252,399 @@ A configuração das URLs do aplicativo ocorre de forma muito similar à do proj
 
 ```python
 from django.urls import path
+from .views import view, MyView
 
 urlpatterns = [
-	path('link-da-página/', view-da-página)
+	path('padrão-da-url/', view),  # FBV
+	path('padrão-da-url/', MyView.as_view())  # CBV
 ]
 ```
 
 #### Views
 
-#### Template
+As views podem ser definidas de duas formas: Function Based Views (FBV), na qual criamos uma função para representar a view, e Class Based Views (CBV), na qual a view é representada por uma classe.
+
+Uma das vantagens da FBV é sua facilidade de implementação, principalmente para projetos menores ou páginas com funcionalidades reduzidas (por exemplo, caso desejemos uma página estática que apenas exibe informações pré-determinadas na tela, a implementação de FBV é muito mais direta). Por outro lado, como a CBV funciona baseada na herança de classes já implementada pelo framewrok, muitas funcionalidades já vêm prontas para uso, o que é uma vantagem da CBV em comparação com a FBV, na qual devemos implementar manualmente na função tudo o que desejamos.
+
+##### Function Based Views
+
+Por padrão, toda função de view recebe um parâmetro *request* (que indica se é uma requisição do tipo GET, POST etc.) e deve retornar a chamada da função *render*, que recebe como parâmetros o request e o nome do template a ser utilizado.
+
+A estrutura básica que deve estar presente no arquivo `views.py` é a seguinte:
+
+```python
+from django.shortcuts import render
+
+def view(request):
+	return render(request, "template.html")
+```
+
+##### Class Based Views
+
+Para construir uma classe que representa uma view, devemos obrigatoriamente herdar alguma classe padrão do Django. A lista de todas as classes disponíveis pode ser lida na [documentação](https://docs.djangoproject.com/pt-br/4.1/ref/class-based-views/).
+
+```python
+from .models import MyModel
+from django.views.generic import TemplateView, ListView
+
+class MyView(TempleteView):
+	template_name = template1.html
+
+class MyObjects(ListView):
+	template_name = template2.html
+	model = MyModel
+	# nesse caso, a variável passada no context é sempre chamada de "object_lust"
+```
+
+##### Passagem de Parâmetros para as Views
+
+O DetailView, por exemplo, cria uma página diferente para cada objeto. Sendo assim, é necessário fazer alterações à configuração do URL:
+
+```python
+from django.urls import path
+from .views import MyDetailView
+
+urlpatterns = [
+	path('padrão-da-url/<int:pk>', MyDetailView.as_view() )
+]
+```
+
+Os sinais `<>` indicam a presença de uma variável dentro do URL. Dentro deles, é preciso passar a informação a ser exibida no seguinte formato: `<tipo-da-variável:variável>`. No exemplo acima, "pk" significa "primary key", ou seja, o id do item no banco de dados.
+
+#### Templates
+
+No arquivo `settings.py` (presente no direttório do projeto), dentro da variável `TEMPLATES`, podemos configurar duas opções para armazenar os [arquivos HTML](#Configuração%20das%20Páginas%20HTML), contendo os templates a serem usados no site:
+- Se a opção `APP_DIRS` estiver com o valor `True`, podemos armazenar os arquivos em uma parta chamada `templates`, que deve ser criada dentro do diretório do aplicativo.
+	- Recomenda-se utilizar essa alternativa para criar páginas específicas para cada view daquele aplicativo.
+- Dentro da opção `DIRS`, podemos adicionar uma (ou mais) pastas, e armazenar os templates nas pastas configuradas.
+	- Recomenda-se criar essa pasta na raiz do projeto e utilizá-la para armazenar configurações que afetem/estejam presentes em todas as páginas do site (fonte, barra de navegação, rodapé etc.).
+
+## Configuração das Páginas HTML
+
+***Nota:*** ao longo desta seção, a palavra "template" será utilizada com seu sigificado cotidiano (ou seja, "padrão", "base"), e não como referência ao elemento *template* do django.
+
+### Blocos Dinâmicas
+
+O Django permite a inclusão de blocos dinâmicas nos arquivos em HTML, isto é, tags cujo valor pode ser alterado nas páginas sem ser necessário alterar o arquivo original em si. Isso permite a criação de templates para as páginas, pois podemos mesclar trechos estáticos e dinâmicos, evitando a necessidade de repetição de código nos diferentes arquivos HTML utilizados no site.
+
+Para isso, devemos adicionar a estrutura de bloco no arquivo contendo o template, dentro da tag que desejamos alterar dinamicamente:
+
+```html
+<tag>
+	{% block nome-do-bloco %}
+	{% endblock %}
+</tag>
+```
+
+e, no arquivo que utilizará o template, informamos que a página **estenderá** o template e passamos dentro do bloco o valor que queremos que ele assuma:
+
+```html
+{% extends 'arquivo-do-template.html' %}
+
+{% block nome-do-bloco %}
+Conteúdo que desejamos inserir.
+{% endblock %}
+```
+
+Por exemplo, se quisermos alterar o título e o conteúdo de cada página dinamicamente, criamos o nosso arquivo do template, digamos, `base.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block titulo %}
+        {% endblock %}
+    </title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <p>
+        Este parágrafo estará presente em todas as páginas que utilizarem esse template, logo abaixo do conteúdo que adicionarmos dinamicamente dentro do bloco "content".
+    </p>
+</body>
+</html>
+```
+
+e no nosso arquivo que utilizará esse template, digamos, `homepage.html`, estendemos a base e informamos o valor que desejamos que cada bloco assuma:
+
+```html
+{% extends 'base.html' %}
+
+{% block titulo %}
+HomePage
+{% endblock %}
+
+{% block content %}
+<h2>Essa é a homepage do nosso site</h2>
+{% endblock %}
+```
+
+### Trechos de Código
+
+Uma outra forma de utilizar templates para as páginas HTML é construir determinada seção do conteúdo (por exemplo, o rodapé) em um arquivo próprio e **incluir** tal seção na página.
+
+O processo para **incluir** um trecho da página é similar ao processo de extender um template, porém nesse caso devemos utilizar a tag `include` e inserí-la no local em que desejamos aquela seção.
+
+Seguindo com o exemplo anterior, podemos criar uma barra de navegação em um arquivo separado, digamos, `navbar.html`:
+
+```html
+<nav>
+    <!-- conteúdo da barra de navegação -->
+</nav>
+```
+
+e incluí-la logo no início do nosso bloco "content":
+
+```html
+{% extends 'base.html' %}
+
+{% block titulo %}
+HomePage
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<h2>Essa é a homepage do nosso site</h2>
+{% endblock %}
+```
+
+Caso desejemos incluir determinado trecho de código em todas as páginas, também é possível adicionar a tag `include` em templates que posteriormente serão estendidos.
+
+### Incluindo Imagens Estáticas
+
+Caso desejemos incluir uma imagem do nosso site, após feita a configuração descrita na seção [[#Pastas Static e Media]], devemos simplesmente adicionar a seguinte estrutura no nosso código:
+
+```html
+{% load static %}
+
+<!-- Código HTML -->
+
+<img src="{% static 'caminho-para-a-imagem/nome-do-arquivo.extensao' %}">
+
+<!-- Código HTML -->
+```
+
+### Links Dinâmicos
+
+É possível passar como parâmetro do `href` (de uma tag `<a>`, por exemplo) o URL de uma view específica do site.
+
+Para isso, devemos novamente configurar ambos arquivos `urls.py`:
+- No arquivo referente ao aplicativo, devemos 1) adicionar o parâmetro `name` na chamada da função `path` e 2) definir a variável `app_name` (recomenda-se utilizar o nome do aplicativo para facilitar o entendimento).
+
+	```python
+	from django.urls import path
+	from .views import MyView
+
+	app_name = 'app'
+	
+	urlpatterns = [
+		path('padrão-da-url/', MyView.as_view(), name='página')
+	]
+	```
+- No arquivo referente ao projeto como um todo, devemos adicionar à chamada da função **`include`** o parâmetro `namespace` com o mesmo valor definido no passo anterior na variável `app_name`.
+	```python
+	from django.urls import include, path
+	...  # outros imports
+
+	urlpatterns = [
+		...,    # outros URLs
+		path('link-desejado/', include('[nome-do-aplicativo].urls', namespace='app'))
+	]
+	```
+
+Feitas essas configurações, é agora possível acessar esses links dentro dos arquivos HTML. Para isso, adicionamos ao `href` a tag `url` do Django e passamos como parâmetro a URL de redirecionamento, no formato `namespace:name` da página desejada:
+
+```html
+<!-- resto da página -->
+
+<a href="{% url 'app:página' %}">Link Dinâmico</a>
+
+<!-- resto da página -->
+```
+
+Caso a URL receba um parâmetro, como mostrado [aqui](#Passagem%20de%20Parâmetros%20para%20as%20Views), devemos ainda passar dado parâmetro à tag `url`:
+
+```html
+<!-- resto da página -->
+
+<a href="{% url 'app:página' object.attribute %}">Link Dinâmico</a>
+
+<!-- resto da página -->
+```
+
+## Contextos
+
+https://docs.djangoproject.com/pt-br/4.1/topics/templates/#the-django-template-language
+
+Ao configurarmos as nossas views, podemos passar variáveis para as páginas HTML, por meio de um *context*.
+
+Em FBV, esse *context* é passado como um terceiro argumento para a função `render`, como no exemplo abaixo:
+
+```python
+from django.shortcuts import render
+from .models import MyModel
+
+def view(request):
+	context = {}
+	lista_models = MyModel.objetcs.all()   # lista todos os objetos do model no bando de dados
+	context["lista_models"] = lista_models
+	return render(request, "template.html", context)
+```
+
+A chave do dicionário representa o nome da variável que estará disponível no arquivo HTML da view.
+
+A lista e descrição de todos os métodos de query do banco de dados pode ser encontrada na [documentação](https://docs.djangoproject.com/pt-br/4.1/ref/models/querysets/#queryset-api).
+
+Feito isso, poderemos agora acessar a variável `lista_models` no nosso arquivo `template.html` e fazer operações com ela. Por exemplo, para exibir na página todos os objetos, utilizamos a seguinte tag:
+
+```html
+{{ lista_models }}
+```
+
+Em CBV, o contexto já é passado automaticamente e depende de qual classe padrão está sendo herdada. O conteúdo do contexto e a variável de acesso (nos arquivos HTML) de cada classe estão descritos na [documentação](https://docs.djangoproject.com/pt-br/4.1/ref/class-based-views/).
+
+### Estrutura Forloop
+
+Também é possível utilizar uma estrutura de `for` no arquivo HTML:
+
+```html
+{% for object in object_list %}
+<hr>
+<p>{{ object.attribute1 }}</p>
+<p>{{ object.attribute2 }}</p>
+<img src="{{ object.image.url }}">
+{% endfor %}
+```
+
+Como é muito comum querermos acessar também o índice do objeto, existe uma estrutura chamada `forloop.counter`. Por exemplo, caso queiramos listar todos os episódios de uma série com seu respectivo número, podemos utilizar o seguinte código:
+ ```python
+ <h1>Episódios</h1>
+ {% for episodio in object.episodios.all %}
+ <p>Episódio {{ forloop.counter }}: {{ episodio.titulo }}</p>
+ {% endfor %}
+```
+
+### Adicionando Variáveis ao Contexto de uma Classe
+
+Caso desejemos passar outras variáveis no contexto, além da variável padrão da classe que está sendo herdada, precisamos apenas sobrescrever sua função `get_context_data`: 
+
+```python
+class MyView(View):
+	template_name = "template.html"
+	model = MyModel
+	
+	def get_context_data(self, **Kwargs):
+		context = super().get_context_data(**kwargs)
+		context['nova-variável'] = novo_valor
+		return context
+```
+
+### Gerenciadores de Contexto
+
+No tópico anterior, aprendemos a passar novas variáveis para uma view específica. Com **gerenciadores de contexto**, podemos passar uma variável para todas as views do nosso site.
+
+Para configurar um gerenciador de contexto, é necessário criar, dentro da pasta do aplicativo, um novo arquivo Python (comumente chamado `context.py`). Nesse arquivo, cada variável personalizada será representada por uma função, que recebe como parâmetro o `request` e retorna um `context`.
+
+Por exemplo, caso queiramos listar todos os filmes de uma plataforma em ordem decrescente de data de criação (ou seja, do mais novo para o mais antigo), podemos criar a seguinte função:
+
+```python
+from .models import Filme
+
+def lista_filmes_recentes(request):
+	lista_filmes = Filme.objects.all().order_by("-data_criacao")  # o sinal negativo indica ordem decrescente
+	return {"lista_filmes_recentes": lista_filmes}
+```
+
+Em seguida, para que as variáveis sejam acessíveis nas páginas HTML, é necessário alterar o arquivo `settings.py`, adicionando o novo context à lista de `context_processors` presente no parâmetro `OPTIONS` da variável `TEMPLATES`, seguindo o seguinte padrão: `nome-do-app.nome-do-arquivo.nome-da-função-do-context`.
+
+```python
+TEMPLATES = [
+	{
+		...
+		'OPTIONS': {
+			'context_processors': [
+				...
+				'filme.context.lista_filmes_recentes'
+			]
+		}
+	}
+]
+```
+
+A partir deste ponto, os novos contextos definidos serão acessíveis a partir de todos os arquivos HTML do projeto.
+
+### Filtros
+
+É possível adicionar filtros às variáveis e argumentos das tags.
+
+Por exemplo, caso queiramos exibir apenas os 50 primeiros caracteres da descrição de um objeto do modelo, podemos utiliza o seguinte código em nosso arquivo HTML:
+```html
+<p>
+	{{ object.descricao|slice:":50" }}
+</p>
+```
+
+## Alterando o modelo a partir da view
+
+Por vezes, desejamos atualizar algum atributo de um objeto do modelo ao se acessar uma página do nosso site (por exemplo, contabilizar uma visualização de um filme). Isso é feito ao se alterar o comportamento da view quando ela recebe um requisição do tipo GET.
+
+Views baseadas em classes (CBV) têm um método padrão que processa tais requisições. Assim, para alterarmos o modelo ao acessarmos a página, devemos sobrescrever o método, aplicando as alterações desejadas e retornando a chamada no método da classe pai.
+
+Para aplicar as alterações desejadas, precisamos primeiro recuperar o objeto (cuja view foi requisitada) com o método `self.get_objects()`, fazer as modificações necessárias e, por fim, salvar as alterações feitas com o método `self.save()`.
+
+Seguindo o exemplo da visualização do filme, podemos utilizar o seguinte código:
+```python
+def get(self, request, *args, **kwargs):
+	filme = self.get_object()  # descobre qual filme foi acessado
+	filme.visualizacoes += 1   # contabiliza a visualização
+	filme.save()               # salva a alteração
+	return super().get(request, *args, **kwargs)  # redireciona o usuário para a URL final
+```
+
+## Formulários
+
+### Barra de Pesquisa
+
+Ao criar formulários no HTML com a tag `form`, devemos sempre passar o atributo `method`, indicando se desejamos fazer um `GET` ou `POST`, e o atributo `action`, que indica qual ação será realizada (no caso de um GET, para qual URL o usuário será direcionado). Além disso, devemos sempre configurar, na tag `input`, o atributo `name`, que será usado ao sobrescrevermos a função `get_queryset` da nossa view.
+
+Por exemplo, para criar uma barra de busca de filmes pelo título, podemos criar o seguinte formulário:
+```html
+[pesquisa.html]
+<form action="{{% url 'filme:pesquisafilme' %}}" method="get">
+    <input type="text" name="query" placeholder="Pesquisar...">
+    <input type="submit" value="">
+</form>
+```
+```python
+[views.py]
+class PesquisaFilme(ListView):
+	template_name = pesquisa.html
+	model = Filme
+
+	def get_queryset(self):  # edita o *object_list* retornado no context da página
+		termo_pesquisa = self.request.GET.get('query')  # recupera o valor do parâmetro "query" da requisição
+		if termo_pesquisa:
+			object_list = self.model.object.filter(titulo__icontains=termo_pesquisa)
+			return object_list
+		else:
+			return None
+```
+```python
+[urls.py - nenhuma alteração específica é necessária]
+from .models import PesquisaFilme
+
+urlpatterns = [
+	path('pesquisa/', PesquisaFilme.as_view(), name="pesquisafilme")
+]
+```
+
+## Usuário
 
 ## Referências
-
-[Django Documentation - django-admin and manage.py](https://docs.djangoproject.com/pt-br/4.1/ref/django-admin/)
 
 [Documentação do Django](https://docs.djangoproject.com/pt-br/4.1/)

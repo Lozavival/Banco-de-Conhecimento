@@ -1,5 +1,5 @@
 ---
-tags: markdown, escrita, marcação
+tags: escrita, marcação
 ---
 
 # Markdown

@@ -1,5 +1,5 @@
 ---
-tags: c/c++, unicamp, ed
+tags: c-c++, unicamp, estruturas-dados
 ---
 
 # Título

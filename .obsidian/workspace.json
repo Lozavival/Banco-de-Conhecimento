@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "804004628abd1df7",
+        "id": "4b462723d721a92b",
         "type": "tabs",
         "children": [
           {
-            "id": "fbc8d7d6a451b6c2",
+            "id": "be4cde8aa71dff1e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -131,11 +131,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 285.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -148,17 +148,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "fbc8d7d6a451b6c2",
+  "active": "be4cde8aa71dff1e",
   "lastOpenFiles": [
-    "templates/anotações.md",
+    "R.md",
+    "markdown.md",
+    "Python Impressionador/35 - Orientação a Objetos - Classes e Métodos.md",
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Unicamp/MC202 - Estruturas de Dados.md",
-    "Python Impressionador/28 - Ambientes Virtuais.md",
-    "Python Impressionador/35 - Orientação a Objetos - Classes e Métodos.md",
+    "templates/anotações.md",
     "Python Impressionador/44 - Criação de Sites com Django.md",
+    "Python Impressionador/28 - Ambientes Virtuais.md",
     "Python-Impressionador/Ambientes-Virtuais.md",
-    "markdown.md",
-    "python/venv.md",
-    "python/django.md"
+    "python/venv.md"
   ]
 }
