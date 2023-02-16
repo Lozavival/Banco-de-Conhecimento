@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "fbade52165c5d5e1",
+        "id": "8e6a236a7f30f092",
         "type": "tabs",
         "children": [
           {
-            "id": "85dd76bdf8128bbe",
+            "id": "ded8d2aba5507e88",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Escrita/LaTeX.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Escrita/LaTeX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,9 +102,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Escrita/LaTeX.md"
-              }
+              "state": {}
             }
           },
           {
@@ -118,7 +111,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Escrita/LaTeX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,17 +139,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "85dd76bdf8128bbe",
+  "active": "fbb4008e85b4ba51",
   "lastOpenFiles": [
     "templates/anotações.md",
-    "Escrita/LaTeX.md",
-    "Linguagens de Programação/Python/Matplotlib.md",
-    "Linguagens de Programação/Python/Ambientes Virtuais.md",
-    "Linguagens de Programação/Python/NumPy.md",
-    "Linguagens de Programação/Python/Orientação a Objetos.md",
-    "Linguagens de Programação/Python/Django.md",
-    "Linguagens de Programação/R.md",
     "templates/notas diárias.md",
-    "2023-02-09.md"
+    "markdown.md",
+    "R.md",
+    "Linguagens de Programação/R.md",
+    "Escrita/Markdown.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Linguagens de Programação/Python/Ambientes Virtuais.md",
+    "Escrita/LaTeX.md",
+    "Linguagens de Programação/Python/Matplotlib.md"
   ]
 }
