@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4b462723d721a92b",
+        "id": "fbade52165c5d5e1",
         "type": "tabs",
         "children": [
           {
-            "id": "be4cde8aa71dff1e",
+            "id": "85dd76bdf8128bbe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python Impressionador/44 - Criação de Sites com Django.md",
+                "file": "Escrita/LaTeX.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.5,
-    "collapsed": true
+    "width": 236.5
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python Impressionador/44 - Criação de Sites com Django.md",
+                "file": "Escrita/LaTeX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python Impressionador/44 - Criação de Sites com Django.md"
+                "file": "Escrita/LaTeX.md"
               }
             }
           },
@@ -119,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python Impressionador/44 - Criação de Sites com Django.md",
+                "file": "Escrita/LaTeX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,17 +147,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "be4cde8aa71dff1e",
+  "active": "85dd76bdf8128bbe",
   "lastOpenFiles": [
-    "R.md",
-    "markdown.md",
-    "Python Impressionador/35 - Orientação a Objetos - Classes e Métodos.md",
-    "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
-    "Unicamp/MC202 - Estruturas de Dados.md",
     "templates/anotações.md",
-    "Python Impressionador/44 - Criação de Sites com Django.md",
-    "Python Impressionador/28 - Ambientes Virtuais.md",
-    "Python-Impressionador/Ambientes-Virtuais.md",
-    "python/venv.md"
+    "Escrita/LaTeX.md",
+    "Linguagens de Programação/Python/Matplotlib.md",
+    "Linguagens de Programação/Python/Ambientes Virtuais.md",
+    "Linguagens de Programação/Python/NumPy.md",
+    "Linguagens de Programação/Python/Orientação a Objetos.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Linguagens de Programação/R.md",
+    "templates/notas diárias.md",
+    "2023-02-09.md"
   ]
 }

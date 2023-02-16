@@ -9,10 +9,10 @@
   "strictLineBreaks": true,
   "showIndentGuide": false,
   "pdfExportSettings": {
-    "includeName": true,
+    "includeName": false,
     "pageSize": "A4",
-    "landscape": true,
-    "margin": "0",
+    "landscape": false,
+    "margin": "2",
     "downscalePercent": 100
   },
   "promptDelete": false
