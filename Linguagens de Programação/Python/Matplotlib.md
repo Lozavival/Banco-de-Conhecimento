@@ -1,5 +1,5 @@
 ---
-tags: c-c++, unicamp, estruturas-dados
+tags: python, bibliotecas, ciência-de-dados
 ---
 
 # 
