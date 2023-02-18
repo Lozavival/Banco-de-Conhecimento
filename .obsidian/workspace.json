@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8e6a236a7f30f092",
+        "id": "819e11780929a5e2",
         "type": "tabs",
         "children": [
           {
-            "id": "ded8d2aba5507e88",
+            "id": "f2c28ca6b7d8dc97",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Escrita/Markdown.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -81,6 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Escrita/Markdown.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +109,18 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Escrita/Markdown.md"
+              }
             }
           },
           {
-            "id": "dc2aedd9de5cb22c",
+            "id": "e15eb5bb6b3ff3ab",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Escrita/Markdown.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +132,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -139,17 +149,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "fbb4008e85b4ba51",
+  "active": "f2c28ca6b7d8dc97",
   "lastOpenFiles": [
-    "templates/anotações.md",
-    "templates/notas diárias.md",
-    "markdown.md",
-    "R.md",
+    "Escrita/LaTeX.md",
     "Linguagens de Programação/R.md",
     "Escrita/Markdown.md",
+    "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
+    "Linguagens de Programação/Python/NumPy.md",
+    "Planejamento.txt.md",
+    "Banco de Conhecimento.md",
+    "Linguagens de Programação/Python/SciPy.md",
     "Linguagens de Programação/Python/Django.md",
-    "Linguagens de Programação/Python/Ambientes Virtuais.md",
-    "Escrita/LaTeX.md",
-    "Linguagens de Programação/Python/Matplotlib.md"
+    "Linguagens de Programação/Python/Ambientes Virtuais.md"
   ]
 }
