@@ -11,12 +11,13 @@ tags: escrita, marcação
 ## Tabela de Conteúdos
 
 - [Folha de Consulta](#Folha-de-Consulta)
-	- [Titulação](#Titulações)
+	- [Titulações](#Titulações)
 	- [Parágrafos](#Parágrafos)
 	- [Quebras de Linha](#Quebras-de-Linha)
 	- [Ênfase](#Ênfase)
 	- [Citações](#Citações)
 	- [Listas](#Listas)
+	- [Equações](#Equações)
 	- [Código](#Código)
 	- [Links](#Links)
 	- [Imagens](#Imagens)
@@ -52,7 +53,7 @@ Primeiro parágrafo
 Segundo parágrafo
 ```
 
-- A não ser que o parágrafo esteja em uma lista, não identá-lo.
+- A não ser que o parágrafo esteja em uma lista, não indentá-lo.
 
 ### Quebras de Linha
 
@@ -94,8 +95,6 @@ Por vezes, desejamos destacar as ==palavras-chave== de determinado assunto.
 ```markdown
 > Isso é uma citação.
 ```
-
-> Isso é uma citação.
 
 - Citações podem:
 	- Conter múltiplos parágrafos (nesse caso, adicionar `>` em todas as linhas);
@@ -139,6 +138,19 @@ Para criar uma lista de tarefas, comece a linha com colchetes separados por um e
 - [x] Escrever o post
 - [ ] Atualizar o website
 - [ ] Contatar o usuário
+```
+
+### Equações
+
+É possível adicionar equações utilizando o [LaTeX](LaTeX).
+
+Para centralizar uma equação, basta envolver o código com duplo cifrão (`$$`):
+```markdown
+$$x = \frac{-b \pm \sqrt{b^{2}-4ac}}{2}$$
+```
+Também é possível adicionar equações na mesma linha do texto utilizando um único cifrão:
+```markdown
+Utilizamos a Fórmula de Bhaskara, $x = \frac{-b \pm \sqrt{b^{2}-4ac}}{2}$, para encontrar as raízes de uma equação de 2º grau.
 ```
 
 ### Código
@@ -189,7 +201,7 @@ O link para a imagem pode ser tanto o URL como o caminho (absoluto ou relativo).
 
 ### Tabelas
 
-Deve haver pelo menos 3 hífens separando cada coluna de cabeçalho.<br>O traços externos (`|`) são opcionais, e não é necessário alinhar as colunas no arquivo markdown para que o resultado final fique alinhado.
+Deve haver pelo menos 3 hifens separando cada coluna de cabeçalho.<br>O traços externos (`|`) são opcionais, e não é necessário alinhar as colunas no arquivo markdown para que o resultado final fique alinhado.
 
 ```markdown
 | Cabeçalho 1 | Cabeçalho 2 | Cabeçalho 3 |
@@ -200,7 +212,7 @@ Deve haver pelo menos 3 hífens separando cada coluna de cabeçalho.<br>O traço
 
 #### Alinhamento
 
-O alinhamento do texto nas colunas é feito ao se adicionar dois pontos (`:`) à esquerda, à direita ou em ambos lados dos hífens da coluna de cabeçalho.
+O alinhamento do texto nas colunas é feito ao se adicionar dois pontos (`:`) à esquerda, à direita ou em ambos lados dos hifens da coluna de cabeçalho.
 
 ```markdown
 | Esquerda | Centro | Direita |
@@ -217,3 +229,5 @@ O alinhamento do texto nas colunas é feito ao se adicionar dois pontos (`:`) à
 [Christian Lempa's Cheat Sheet](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 
 [Markdown Guide](https://www.markdownguide.org/cheat-sheet)
+
+[Livro "Curso-R", seção 9.1.4 ("Equações")](https://livro.curso-r.com/9-1-markdown.html#equa%C3%A7%C3%B5es)

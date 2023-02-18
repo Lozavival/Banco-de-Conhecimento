@@ -26,3 +26,5 @@ A+x
 ## Referências
 
 Materiais disponibilizados pelo professor Wilson Inácio Pereira ao longo da disciplina CM3033 - Introdução à Ciência de Dados, cursada no IMT (Instituto Mauá de Tecnologia)
+
+https://livro.curso-r.com/index.html
