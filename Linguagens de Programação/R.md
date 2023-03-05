@@ -8,6 +8,11 @@ R é uma linguagem de programação multi-paradigma voltada à manipulação, an
 
 ---
 
+```toc
+```
+
+---
+
 ## 
 
 ```r
@@ -22,6 +27,8 @@ sqrt(A)
 A+B
 A+x
 ```
+
+---
 
 ## Referências
 

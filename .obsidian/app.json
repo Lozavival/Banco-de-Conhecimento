@@ -11,9 +11,10 @@
   "pdfExportSettings": {
     "includeName": false,
     "pageSize": "A4",
-    "landscape": false,
+    "landscape": true,
     "margin": "2",
     "downscalePercent": 100
   },
-  "promptDelete": false
+  "promptDelete": false,
+  "livePreview": false
 }
