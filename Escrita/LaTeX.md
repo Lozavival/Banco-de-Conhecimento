@@ -13,7 +13,7 @@ LaTeX é um sistema de marcação voltado à preparação e editoração de docu
 
 ---
 
-##
+## Equações
 
 ---
 
@@ -22,3 +22,5 @@ LaTeX é um sistema de marcação voltado à preparação e editoração de docu
 [Página da Wikipedia sobre LaTeX](https://pt.wikipedia.org/wiki/LaTeX)
 
 ["Minicurso: Introdução ao LaTeX" - Eng Mec Monitoria UFAM](https://www.youtube.com/playlist?list=PLhkywK1lqclluwx_V1jgOESxf1ppXuzAC)
+
+https://www.overleaf.com/learn

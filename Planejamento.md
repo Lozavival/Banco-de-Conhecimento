@@ -2,7 +2,6 @@
 
 - [ ] Terminar documentação do [[NumPy]]
 - [ ] Organizar anotações do [[Django]] e complementar com documentação
-- [ ] Refatorar anotações do [[Markdown]] com texto mais explicativo
 
 # Próximos Passos
 

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d3c0c35c2aca116d",
+        "id": "c3395e0f2dbbba26",
         "type": "tabs",
         "children": [
           {
-            "id": "3a5cca2cd307bed4",
+            "id": "37dec37cbe9e3119",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -134,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 285.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,13 +147,13 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "3a5cca2cd307bed4",
+  "active": "37dec37cbe9e3119",
   "lastOpenFiles": [
-    "Linguagens de Programação/Haskell.md",
     "Planejamento.md",
+    "Escrita/Markdown.md",
+    "Linguagens de Programação/Haskell.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Banco de Conhecimento.md",
-    "Escrita/Markdown.md",
     "Linguagens de Programação/Python/SciPy.md",
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Unicamp/MC202 - Estruturas de Dados.md",
