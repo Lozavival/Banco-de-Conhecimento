@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c3395e0f2dbbba26",
+        "id": "27f655a8dee69257",
         "type": "tabs",
         "children": [
           {
-            "id": "37dec37cbe9e3119",
+            "id": "466ad13107fb89e4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -147,27 +147,28 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "37dec37cbe9e3119",
+  "active": "466ad13107fb89e4",
   "lastOpenFiles": [
-    "Planejamento.md",
-    "Escrita/Markdown.md",
-    "Linguagens de Programação/Haskell.md",
-    "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Banco de Conhecimento.md",
+    "Planejamento.md",
+    "CM3033.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Linguagens de Programação/R.md",
+    "Linguagens de Programação/Haskell.md",
+    "Linguagens de Programação/Python/NumPy.md",
+    "Linguagens de Programação/Python/Orientação a Objetos.md",
+    "Linguagens de Programação/Python/Python.md",
+    "Escrita/Markdown.md",
     "Linguagens de Programação/Python/SciPy.md",
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Unicamp/MC202 - Estruturas de Dados.md",
     "Unicamp/MC322 - Programação Orientada a Objetos.md",
     "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
     "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
-    "Linguagens de Programação/R.md",
     "Kanban sem título.md",
-    "Linguagens de Programação/Python/NumPy.md",
     "Escrita/Escrita.md",
     "Escrita/LaTeX.md",
-    "Sem título.md",
     "templates/templates.md",
-    "(link-para-a-imagem).md",
-    "Linguagens de Programação/Python/Django.md"
+    "(link-para-a-imagem).md"
   ]
 }
