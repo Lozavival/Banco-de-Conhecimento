@@ -1,5 +1,5 @@
 ---
-tags: 
+tags: linguagens
 ---
 
 # Structured Query Language (SQL)
