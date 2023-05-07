@@ -131,7 +131,8 @@ Dentro das opções de documentclass podemos definir configurações do document
 
 - part
 - chapter (apenas abntex2, não funciona com article)
-	- cada capítulo é criado em uma nova página automaticamente
+	- cada capítulo é criado em uma nova página automaticamente, com uma página em branco entre a capítulo anterior e o capítulo atual. Para remover essa página em branco, devemos adicionar a opção `oneside` ao definirmos a classe do documento.
+  - é possível configurar como serão exibidos os nomes dos capítulos ao longo do documento. Para isso, basta adicionar a opção "chapter" ao definirmos a classe do documento (por exemplo, `chapter=TITLE` faz com que o título seja exibido inteiramente em maiúsculas).
 - section
 - subsection
 - subsubsection
@@ -227,8 +228,8 @@ Quando formos fazer citação a alguma referência bibliográfica, utilizamos o 
 
 Há duas formas de escrever equações no LaTex: usando cifrão (`$`) ou dentro de um bloco `equation`.
 
-- crifrões simples indicam equação inline;
-- crifrões duplos indicam equação em linha própria e centralizada;
+- cifrões simples indicam equação inline;
+- cifrões duplos indicam equação em linha própria e centralizada;
 - `equation` cria uma equação em linha própria, centralizada e numerada (podemos utilizar `equation*` para remover a numeração).
 
 ```latex
