@@ -210,7 +210,7 @@ WHERE id = '93'
 Exclui todos os registros da tabela em que o predicado especificado seja verdadeiro:
 
 ```sql
-    DELETE FROM <tabela> WHERE <condição>
+DELETE FROM <tabela> WHERE <condição>
 ```
 
 A exclusão não pode violar as restrições de integridade referencial (chave estrangeira). Apesar disso, alguns SGBDs permitem exclusões em cascata.
@@ -221,15 +221,8 @@ Realiza uma consulta aos dados presentes no banco.
 
 A estrutura básica contém os seguintes elementos:
 
-- **Lista de atributos:** nomes dos atributos a serem recuperados pela consulta. Quando a lista de tributos envolver todos os atributos da relação, pode-se usar `*`.
-- **Lista de tabelas:** nomes das tabelas envolvidas no processamento da consulta. Se mais de uma tabela for fornecida, será feita operação de produto cartesiano ou junção.
-- **Condição:** expressão booleana que identifica as linhas a serem recuperadas pela consulta. Pode conter:
-    - Conectivos lógicos: AND, OR e NOT
-    - Operadores de comparação: <, <=, >, >=, =, <>
-    - Comparador de string: `LIKE <expressão regular>`. Utilizamos `%` para indicar qualquer número de caracteres e `_` para um número fixo de caracteres. Por exemplo, a expressão regular `%3f_` indica que queremos todas as strings em que o antepenúltimo caractere seja "3" e o penúltimo seja "f".
-
 ```sql
-SELECT <lista de colunas>
+SELECT <lista de atributos>
 FROM <lista de tabelas>
 [WHERE <condição>]
 [GROUP BY <coluna_agrupar>]
@@ -237,9 +230,55 @@ FROM <lista de tabelas>
 [ORDER BY <lista de atributos>]
 ```
 
-Apenas as cláusulas SELECT e FROM são obrigatórias; quando existentes, as cláusulas devem aparecer nessa ordem.
+Apenas as cláusulas SELECT e FROM são obrigatórias. Quando existentes, as cláusulas opcionais devem aparecer nessa ordem.
 
-**Observação:** ao contrário da álgebra relacional, o SELECT não elimina repetições do resultado (ou seja, pode retornar tuplas repetidas). Para suprimir esse comportamento e forçar que apenas retorne tuplas distintas, é necessário usar a palavra-chave DISTINCT:
+- **Lista de atributos:** nomes dos atributos a serem recuperados pela consulta. Quando a lista de tributos envolver todos os atributos da relação, pode-se usar `*`.
+    - Podemos também realizar operações com atributos durante a seleção. Por exemplo, caso desejemos saber a idade de cada carro, podemos efetuar a seguinte operação:
+        ```sql
+        SELECT (2023 - anofab) as idade, marca
+        FROM taxi;
+        ```
+- **Lista de tabelas:** nomes das tabelas envolvidas no processamento da consulta. Se mais de uma tabela for fornecida, será feita operação de produto cartesiano ou junção.
+- **Condição:** expressão booleana que identifica as linhas a serem recuperadas pela consulta. Pode conter:
+    - Conectivos lógicos: AND, OR e NOT
+    - Operadores de comparação: <, <=, >, >=, =, <>
+        - Utilizamos o operador `IN` quando queremos comparar um mesmo atributo com mais de um valor constante.
+            ```sql
+            SELECT placa
+            FROM taxi
+            WHERE marca <> 'Ford' AND marca <> 'Chevrolet';
+
+            SELECT placa
+            FROM taxi
+            WHERE marca NOT IN ('Ford', 'Chevrolet');
+            ```
+        - O operador `BETWEEN` pode ser utilizado quando desejamos selecionar valores (números, textos ou datas) dentro de um determinado intervalo (incluindo os extremos).
+            ```sql
+            SELECT marca, modelo
+            FROM taxi
+            WHERE 2000 <= anofab AND anofab <= 2003;
+            
+            SELECT marca, modelo
+            FROM taxi
+            WHERE anofab BETWEEN 2000 AND 2003;
+            ```
+        - Quando um valor nulo é comparado através dos operadores `=` ou `<>`, a comparação sempre falha. Nesse caso, precisamos utilizar o operador `IS`:
+            ```sql
+            SELECT *
+            FROM taxi
+            WHERE reg_adetax IS NOT NULL;
+            ```
+    - Comparador de string: `LIKE <expressão regular>`. Utilizamos `%` para indicar qualquer número de caracteres e `_` para um número fixo de caracteres. Por exemplo, a expressão `%3f_` indica que queremos todas as strings em que o antepenúltimo caractere seja "3" e o penúltimo seja "f".
+
+É possível também utilizar consultas aninhadas. Por exemplo, obter o modelo de cada táxi que fez pelo menos uma corrida, podemos fazer a seguinte consulta:
+
+```sql
+SELECT modelo
+FROM taxi
+WHERE placa IN (SELECT placa FROM corrida)
+```
+
+Ao contrário da álgebra relacional, o SELECT não elimina repetições do resultado (ou seja, pode retornar tuplas repetidas). Para suprimir esse comportamento e forçar que apenas retorne tuplas distintas, é necessário usar a palavra-chave DISTINCT:
 
 ```sql
 SELECT DISTINCT <atributos> FROM <tabela>
@@ -291,3 +330,87 @@ Podemos utilizar ainda o comando `HAVING` para restringir os resultados do GROUP
     - Exemplo: $\text{cliente} \times \text{taxi}$ --> `SELECT * FROM cliente, taxi`
 - Junção ($\Theta$):
     - `SELECT * FROM <tabela1>, <tabela2> WHERE <predicado>`
+
+##### UNION / EXCEPT / INTERSECT
+
+Referência: <https://manifold.net/doc/mfd9/union___except___intersect.htm>
+
+Os operadores `UNION`, `EXCEPT` e `INTERSECT` são usados entre duas consultas e desempanham o mesmo papel dos operadores de união ($\cup$), subtração ($-$) e interseção ($\cap$), respectivamente, da álgebra relacional (e da teoria de conjuntos).
+
+- **EXCEPT:** retorna uma tabela de todos os registros no resutado da primeira consulta que não estão entre os resultados da segunda consulta.
+    ```sql
+    -- Id's de clientes que nunca fizeram uma corrida
+    SELECT id
+    FROM cliente
+    WHERE id NOT IN (SELECT cliid FROM corrida)
+
+    SELECT id FROM cliente
+    EXCEPT
+    SELECT cliid FROM corrida
+    ```
+- **UNION:** retorna uma tabela com todos os registros encontrados no resultado que qualquer uma das consultas, removendo as duplicatas. Para manter as duplicatas, utilizamos `UNION ALL`.
+    ```sql
+    SELECT placa FROM taxi
+    UNION
+    SELECT placa from corrida
+    -- Resultado: placas de todos os táxis sem repetição
+
+    SELECT placa FROM taxi
+    UNION ALL
+    SELECT placa from corrida
+    -- Resultado: placas de todos os táxis, repetindo aqueles que fizeram corridas
+    ```
+- **INTERSECT:** retorna uma tabela com todos os registros encontrados nos resultados de ambas consultas, removendo as duplicatas. Para manter as duplicatas, utilizamos `INTERSECT ALL`.
+    ```sql
+    SELECT placa FROM taxi
+    INTERSECT
+    SELECT placa from corrida
+    -- Resultado: placas de todos os táxis que já fizeram corridas
+    ```
+
+Apesar dos exemplos acima utilizarem exemplos de operações entre duas consultas, podemos utilizar esses operadores entre quaisquer duas consultas ou expressões de tabelas.
+
+```sql
+SELECT nome FROM cliente
+INTERSECT
+VALUES ('Dino'), ('Barney'), ('Quincas'), ('Ana'), ('Marcelo');
+
+SELECT placa FROM corrida
+EXCEPT
+VALUES ('DAE6534'), ('KLM1234'), ('DKL7878'), ('ABCD9876');
+```
+
+#### Miscelânea
+
+##### CASE WHEN
+
+A expresão `CASE` percorre as condições e retorna um valor quando da primeira comdição satisfeita (similarmente a uma estrutura if-then-else). Se nenhuma condição for verdadeira, será retornado o valor da cláusula `ELSE`. Se não existir `ELSE` e nenhuma condição for verdadeira, será retornado NULL.
+
+Podemos utilizar essa estrutura ao adicionar uma nova coluna a uma tabela ou durante uma consulta:
+
+```sql
+ALTER TABLE taxi;
+ADD COLUMN reg_adetax INTEGER;
+
+UPDATE taxi SET reg_adetax = 
+CASE placa
+    WHEN 'DAE6534' THEN 1234
+    WHEN 'DKL4598' THEN 5432
+    WHEN 'DKL7878' THEN 9987
+    WHEN 'JDM8776' THEN 4321
+    WHEN 'JJM3692' THEN 9876
+    WHEN 'KLM1234' THEN 4567
+    WHEN 'QWE4567' THEN 2345
+    ELSE NULL
+END;
+```
+
+```sql
+SELECT marca, modelo,
+CASE
+    WHEN 2023 - anofab > 20 THEN 'Mais de 20 anos'
+    WHEN 2023 - anofab = 20 THEN '20 anos'
+    ELSE 'Menos de 20 anos'
+END AS texto_idade
+FROM taxi;
+```
