@@ -4,7 +4,7 @@ tags: escrita, marcação
 
 # LaTeX
 
-LaTeX é um sistema de marcação voltado à preparação e editoração de documentos técnicos e científicos de alta qualidade tipográfica. Sua ideia central é encorajar o usuário a pensar primariamente na estrutura e conteúdo do texto, distanciando-se da apresentação visual da informação. 
+LaTeX é um sistema de marcação voltado à preparação e editoração de documentos técnicos e científicos de alta qualidade tipográfica. Sua ideia central é encorajar o usuário a pensar primariamente na estrutura e conteúdo do texto, distanciando-se da apresentação visual da informação (ou seja, escrever primeiro e formatar depois).
 
 ---
 
@@ -15,7 +15,7 @@ LaTeX é um sistema de marcação voltado à preparação e editoração de docu
 
 ## Criando um documento LaTeX
 
-Para criar um documento LaTeX, devemos criar um arquivo `.tex`. O exemplo mais básidco de um exemplo funcional é o seguinte:
+Para criar um documento LaTeX, devemos criar um arquivo `.tex`. O exemplo mais básico de um exemplo funcional é o seguinte:
 
 ```latex
 \documentclass{article}
@@ -24,7 +24,7 @@ First document. This is a simple example, with no extra parameters or packages i
 \end{document}
 ```
 
-A primeira linha de código (`\documentclass{article}`) declara a **classe** de um documento, ou seja, seu tipo. A classe de altera a aparência geral do documento, portanto diferentes tipo de documento requerem diferentes classes.  Por exemplo, algumas das classes disponíveis são `article` (para artigos), `book` (para livros), `assigment` (para escrever enunciados de laboratórios e tarefa de casa) e `beamer` (para apresentação de slides). Os tipo de classe disponíveis no LaTeX podem ser encontrados [aqui](https://www.ctan.org/topic/class).
+A primeira linha de código (`\documentclass{article}`) declara a **classe** de um documento, ou seja, seu tipo. A classe de altera a aparência geral do documento, portanto diferentes tipo de documento requerem diferentes classes.  Por exemplo, algumas das classes disponíveis são `article` (para artigos), `book` (para livros), `assignment` (para escrever enunciados de laboratórios e tarefa de casa) e `beamer` (para apresentação de slides). Os tipo de classe disponíveis no LaTeX podem ser encontrados [aqui](https://www.ctan.org/topic/class).
 
 O **corpo** do documento, ou seja, seu conteúdo, é escrito entre as tags `\begin{document}` e `\end{document}`.
 
@@ -34,7 +34,7 @@ O **preâmbulo** de um documento é tudo aquilo que é escrito *antes* do comand
 
 Ao definirmos a classe de um documento, parâmetros adicionais podem ser incluídos entre colchetes para configurar o documento. Por exemplo, podemos configurar o tamanho da letra e o tamanho do papel, entre outros.
 
-Para carregar pacotes externos (e extender a capacidade do LaTeX), utilizamos o comando `\usepackage{}`. Por exemplo, o pacote `indentfirst` faz com que a primeira linha de cada parágrafo seja indentada automaticamente. Tal qual a classe do documento, também é possível adicionar parâmetros adicionais ao documento entre colchetes. Por exemplo, o comando `\usepackage[portugese]{babel}` carrega o pacote `babel`, que permite suporte para diferentes linguagens, e especificar a linguagem desejada (`portuguese`).
+Para carregar pacotes externos (e extender a capacidade do LaTeX), utilizamos o comando `\usepackage{}`. Por exemplo, o pacote `indentfirst` faz com que a primeira linha de cada parágrafo seja indentada automaticamente. Tal qual a classe do documento, também é possível adicionar parâmetros adicionais ao documento entre colchetes. Por exemplo, o comando `\usepackage[portuguese]{babel}` carrega o pacote `babel`, que permite suporte para diferentes linguagens, e especificar a linguagem desejada (`portuguese`).
 
 Um exemplo de preâmbulo contendo essas configurações pode ser visto abaixo:
 
@@ -44,15 +44,14 @@ Um exemplo de preâmbulo contendo essas configurações pode ser visto abaixo:
 \usepackage{indentfirst}
 ```
 
-
 Outra configuração presente no preâmbulo é a definição do título, autor e data do documento. Para isso, devemos incluir três comandos:
 
 - `\title{titulo}`: especifica o título do documento.
 - `\author{nome}`: especifica o(s) autor(es) do documento.
-	- Podemos ainda adicionar, entre as chaves, o comando `\thanks{}`, que adicionará uma nota de rodapé e é útil para agradecer, por exemplo, alguma instituição no seu artigo.
+    - Podemos ainda adicionar, entre as chaves, o comando `\thanks{}`, que adicionará uma nota de rodapé e é útil para agradecer, por exemplo, alguma instituição no seu artigo.
 - `\date{data}`: especifica a data.
-	- Caso este comando seja omitido do documento, o LaTeX incluirá automaticamente a data atual, ou seja, apresentará o mesmo comportamento do comando `\date{\today}`.
-	- Para que a data não seja exibida (ou seja, queremos incluir apenas título e autor), devemos deixar o parâmetro deste comando vazio, ou seja, escrever apenas `\date{}`.
+    - Caso este comando seja omitido do documento, o LaTeX incluirá automaticamente a data atual, ou seja, apresentará o mesmo comportamento do comando `\date{\today}`.
+    - Para que a data não seja exibida (ou seja, queremos incluir apenas título e autor), devemos deixar o parâmetro deste comando vazio, ou seja, escrever apenas `\date{}`.
 
 Para que as informações de título, autor e data sejam formatados e exibidos, é necessário incluir o comando `\maketitle` no corpo do documento (de preferência logo abaixo do `\begin{document}`).
 
@@ -78,6 +77,42 @@ Conteúdo muito incrível
 
 ## Rascunho bagunçado
 
+### Texto Básico
+
+O LaTeX ignora espaços extra entre as palavras, ou seja, não importa quantos espaços você dê entre uma palavra e outra, o documento final sempre incluirá apenas 1.
+
+Além disso, ele ignora quebras de linha no meio de um parágrafo. Para separar dois parágrafos, é necessário adicionar duas quebras de linha (ou seja, deixar uma ou mais linhas em branco entre os parágrafos). Para criar uma quebra de linha dentro de um parágrafo, adicionamos duas barras invertidas (`\\`) ao final da linha.
+
+### Caracteres especiais
+
+Alguns caracteres são reservados pelo LaTeX para algum propósito especial, de forma que, para incluí-los no documento, não basta apenas digitá-los.
+
+- \#
+- $
+- %
+- ^
+- &
+- _
+- {
+- }
+- ~
+- \\
+
+Caso deseja incluí-los no documento, é necessário escapá-los com uma barra invertida:
+
+```latex
+- \#
+- \$
+- \%
+- \^{}
+- \&
+- \_
+- \{
+- \}
+- $\sim$
+- \textbackslash
+```
+
 ### Estrutura Básica do LateX
 
 ```latex
@@ -87,7 +122,7 @@ Conteúdo muito incrível
 
 \begin{document} % inicia o documento
 
-% conteúdo do codumento aqui
+% conteúdo do documento aqui
 
 \end{document} % encerra o documento
 
@@ -97,7 +132,7 @@ Muitas coisas, no LaTeX, são feitas dentro de **ambientes**. A estrutura básic
 
 ```latex
 \begin[opções]{tipo-do-ambiente}
-	% conteúdo
+    % conteúdo
 \end{tipo-do-ambiente}
 ```
 
@@ -123,6 +158,7 @@ Por exemplo, podemos inserir equações ou imagens no nosso documento:
 - abntex2
 
 Dentro das opções de documentclass podemos definir configurações do documento, como
+
 - tamanho da letra (11pt, 12pt etc)
 - linguagem
 - tamanho da folha (a4paper, letterpaper etc)
@@ -131,8 +167,8 @@ Dentro das opções de documentclass podemos definir configurações do document
 
 - part
 - chapter (apenas abntex2, não funciona com article)
-	- cada capítulo é criado em uma nova página automaticamente, com uma página em branco entre a capítulo anterior e o capítulo atual. Para remover essa página em branco, devemos adicionar a opção `oneside` ao definirmos a classe do documento.
-  - é possível configurar como serão exibidos os nomes dos capítulos ao longo do documento. Para isso, basta adicionar a opção "chapter" ao definirmos a classe do documento (por exemplo, `chapter=TITLE` faz com que o título seja exibido inteiramente em maiúsculas).
+    - cada capítulo é criado em uma nova página automaticamente, com uma página em branco entre a capítulo anterior e o capítulo atual. Para remover essa página em branco, devemos adicionar a opção `oneside` ao definirmos a classe do documento.
+    - é possível configurar como serão exibidos os nomes dos capítulos ao longo do documento. Para isso, basta adicionar a opção "chapter" ao definirmos a classe do documento (por exemplo, `chapter=TITLE` faz com que o título seja exibido inteiramente em maiúsculas).
 - section
 - subsection
 - subsubsection
@@ -159,21 +195,23 @@ Além de gerar uma tabela de conteúdos (sumário) do documento, o nome de cada 
 ### Pacotes Importantes
 
 - **indentfirst**
-	- Indenta automaticamente a primeira linha de cada parágrafo.
+    - Indenta automaticamente a primeira linha de cada parágrafo.
 
 ### Formatação de texto
 
 - Negrito: `\textbf{texto}`
 - Itálico: `\textit{texto}`
-- Underline: `\underline{texto}`
+- Sublinhado: `\underline{texto}`
 - CAPS LOCK: `\textsc{texto}`
 - Alterar a cor: `\textcolor{cor}{texto}`
+
+Além dessa formatação padrão, há também a tag `\emph{}`, cujo resultado depende do publicador ou do estilo aplicado no documento (geralmente, enfatizado é apenas expresso como itálico, porém o publicador pode escolher sublinhar ou mudar a cor, por exemplo).
 
 ### Referências e Citações
 
 Para criarmos a referência bibliográfica, é necessário criar um novo arquivo com a extensão `.bib` (por exemplo, `referencias.bib`). Dentro desse arquivo, devemos seguir a seguinte estrutura:
 
-```
+```tex
 @classe-da-referencia{label,
 author={autor1 and autor2 and autor3 and ...},
 title={titulo-do-arquivo/livro/etc},
@@ -187,7 +225,7 @@ year={ano-de-publicação},
 
 Abaixo seguem alguns exemplos de referências:
 
-```
+```tex
 @article{elbing,
   title={A single-molecule diode},
   author={Elbing, Mark and Ochs, Rolf and Koentopp, Max and Fischer, Matthias and von H{\"a}nisch, Carsten and Weigend, Florian and Evers, Ferdinand and Weber, Heiko B and Mayor, Marcel},
@@ -247,7 +285,7 @@ $$\neg \left( p \lor q \right) \rightarrow \left( \neg p \land \neg q \right)$$
     \label{bhaskara}
 \end{equation}
 
-A Fórmula de Bháskara (Equação \ref{bhaskara}) mostra como encontrar raízes de polinômios de segunda ordem com coeficientes reais.
+A Fórmula de Bhaskara (Equação \ref{bhaskara}) mostra como encontrar raízes de polinômios de segunda ordem com coeficientes reais.
 ```
 
 #### Símbolos Matemáticos
@@ -268,7 +306,7 @@ Podemos nomear as entidades do nosso documento (capítulos, seções, imagens, t
 \label{bhaskara}
 \end{equation}
 
-A Fórmula de Bháskara (Equação \ref{bhaskara}) mostra como encontrar raízes de polinômios de segunda ordem com coeficientes reais.
+A Fórmula de Bhaskara (Equação \ref{bhaskara}) mostra como encontrar raízes de polinômios de segunda ordem com coeficientes reais.
 ```
 
 Para que a referência se torne um link no documento, basta utilizar o pacote `hyperref`.
