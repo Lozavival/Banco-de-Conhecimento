@@ -18,5 +18,7 @@
   "promptDelete": false,
   "livePreview": false,
   "useTab": false,
-  "tabSize": 4
+  "tabSize": 4,
+  "rightToLeft": false,
+  "useMarkdownLinks": true
 }

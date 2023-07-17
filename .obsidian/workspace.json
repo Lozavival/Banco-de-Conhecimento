@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Escrita/LaTeX.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": true
               }
@@ -59,14 +59,6 @@
             }
           },
           {
-            "id": "66d53cf95e8c591b",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
             "id": "e333e926e4552c16",
             "type": "leaf",
             "state": {
@@ -89,18 +81,6 @@
         "id": "108e3898a68e526c",
         "type": "tabs",
         "children": [
-          {
-            "id": "e80f4224292ca4f7",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Escrita/LaTeX.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
           {
             "id": "bb509d984fe1a311",
             "type": "leaf",
@@ -137,14 +117,6 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
-            "id": "ed709a8c5bc311f8",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
             }
           }
         ],
