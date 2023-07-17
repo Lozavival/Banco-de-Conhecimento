@@ -167,7 +167,7 @@ Dentro das opções de documentclass podemos definir configurações do document
 
 - part
 - chapter (apenas abntex2, não funciona com article)
-    - cada capítulo é criado em uma nova página automaticamente, com uma página em branco entre a capítulo anterior e o capítulo atual. Para remover essa página em branco, devemos adicionar a opção `oneside` ao definirmos a classe do documento.
+    - cada capítulo é criado em uma nova página automaticamente, com uma página em branco entre o capítulo anterior e o capítulo atual. Para remover essa página em branco, devemos adicionar a opção `oneside` ao definirmos a classe do documento.
     - é possível configurar como serão exibidos os nomes dos capítulos ao longo do documento. Para isso, basta adicionar a opção "chapter" ao definirmos a classe do documento (por exemplo, `chapter=TITLE` faz com que o título seja exibido inteiramente em maiúsculas).
 - section
 - subsection
@@ -290,13 +290,16 @@ A Fórmula de Bhaskara (Equação \ref{bhaskara}) mostra como encontrar raízes 
 
 #### Símbolos Matemáticos
 
-### ?????
+### Miscelânea
+
+Para adicionar numeração às páginas, devemos utilizar o comando `\textual` no início do texto e `\postextual` ao final do texto.
 
 ```latex
 \textual
 \postextual
-
 ```
+
+Para remover a numeração de uma página específica, utilizamos o comando `\cleardoublepage` (a página ainda conta para a numeração, apenas não será exibido).
 
 Podemos nomear as entidades do nosso documento (capítulos, seções, imagens, tabelas etc.) e referenciá-los posteriormente no texto. Isso é feito por meio dos comandos `\label{}` (para nomear a entidade) e `\ref{}` (para fazer referência).
 
