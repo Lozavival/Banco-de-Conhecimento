@@ -16,5 +16,7 @@
     "downscalePercent": 100
   },
   "promptDelete": false,
-  "livePreview": false
+  "livePreview": false,
+  "useMarkdownLinks": true,
+  "useTab": false
 }

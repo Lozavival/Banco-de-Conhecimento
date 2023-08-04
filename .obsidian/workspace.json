@@ -8,11 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "466ad13107fb89e4",
+            "id": "7cd6057852032372",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Linguagens de Programação/Octave.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -60,12 +65,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "9e51fdd2be1204d4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -81,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Linguagens de Programação/Octave.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linguagens de Programação/Octave.md"
+              }
             }
           },
           {
@@ -111,6 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linguagens de Programação/Octave.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -139,16 +157,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Criar novo canvas": false,
       "graph:Abrir visualização em gráfico": false,
       "switcher:Abrir a troca rápida": false,
-      "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "466ad13107fb89e4",
+  "active": "7cd6057852032372",
   "lastOpenFiles": [
+    "Cloud Computing.md",
+    "Linguagens de Programação/Octave.md",
     "Banco de Conhecimento.md",
     "Planejamento.md",
     "CM3033.md",

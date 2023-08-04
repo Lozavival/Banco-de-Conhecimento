@@ -2,5 +2,7 @@
   "minimumDepth": 2,
   "maximumDepth": 6,
   "listStyle": "number",
-  "title": "## Tabela de Conteúdos"
+  "useMarkdown": true,
+  "title": "## Tabela de Conteúdos",
+  "githubCompat": true
 }
