@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "27f655a8dee69257",
+        "id": "f797b323bfdd041f",
         "type": "tabs",
         "children": [
           {
-            "id": "7cd6057852032372",
+            "id": "bb2c3d98bd8562f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MS211 - Cálculo Numérico.md",
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MS211 - Cálculo Numérico.md",
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MS211 - Cálculo Numérico.md"
+                "file": "Unicamp/MS211 - Cálculo Numérico.md"
               }
             }
           },
@@ -128,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MS211 - Cálculo Numérico.md",
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,11 +148,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 285.5,
+    "width": 306.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -164,16 +164,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7cd6057852032372",
+  "active": "bb2c3d98bd8562f6",
   "lastOpenFiles": [
+    "Unicamp/images/ms211-03-fibonnaci.png",
+    "Unicamp/MS211 - Cálculo Numérico.md",
+    "Unicamp/images/ms211-05-script.png",
+    "Unicamp/images/ms211-02-cos2x.png",
+    "Unicamp/images/ms211-01-cosx.png",
+    "Unicamp/images/ms211-04-customizado.png",
+    "MS211 - Cálculo Numérico.md",
+    "Unicamp/images",
+    "Sem título",
     "untitled2.png",
     "Captura de tela 2023-08-16 151706.png",
     "untitled.png",
     "Captura de tela 2023-08-16 120917.png",
     "Linguagens de Programação/Octave.md",
     "octave-online-line-13.png",
-    "octave-online-line-13 1.png",
-    "MS211 - Cálculo Numérico.md",
     "Escrita/Markdown.md",
     "Linguagens de Programação/Python/NumPy.md",
     "Linguagens de Programação/Python/Django.md",
