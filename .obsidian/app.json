@@ -7,7 +7,7 @@
   "newFileLocation": "root",
   "showInlineTitle": false,
   "strictLineBreaks": true,
-  "showIndentGuide": false,
+  "showIndentGuide": true,
   "pdfExportSettings": {
     "includeName": false,
     "pageSize": "A4",
@@ -16,5 +16,9 @@
     "downscalePercent": 100
   },
   "promptDelete": false,
-  "livePreview": false
+  "livePreview": false,
+  "useTab": false,
+  "tabSize": 4,
+  "rightToLeft": false,
+  "useMarkdownLinks": true
 }

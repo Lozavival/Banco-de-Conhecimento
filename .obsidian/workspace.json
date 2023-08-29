@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "27f655a8dee69257",
+        "id": "bad195bf6ca7b983",
         "type": "tabs",
         "children": [
           {
-            "id": "466ad13107fb89e4",
+            "id": "64d09a3deff7dc8b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Escrita/LaTeX.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -54,10 +59,10 @@
             }
           },
           {
-            "id": "66d53cf95e8c591b",
+            "id": "e333e926e4552c16",
             "type": "leaf",
             "state": {
-              "type": "starred",
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -75,17 +81,6 @@
         "id": "108e3898a68e526c",
         "type": "tabs",
         "children": [
-          {
-            "id": "e80f4224292ca4f7",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
           {
             "id": "bb509d984fe1a311",
             "type": "leaf",
@@ -102,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Escrita/LaTeX.md"
+              }
             }
           },
           {
@@ -111,6 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Escrita/LaTeX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,14 +117,6 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
-            "id": "ed709a8c5bc311f8",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
             }
           }
         ],
@@ -139,17 +129,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Criar novo canvas": false,
       "graph:Abrir visualização em gráfico": false,
       "switcher:Abrir a troca rápida": false,
-      "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "466ad13107fb89e4",
+  "active": "64d09a3deff7dc8b",
   "lastOpenFiles": [
+    "Escrita/Markdown.md",
+    "Escrita/LaTeX.md",
+    "Linguagens de Programação/SQL.md",
+    "Unicamp/mc536-sistema_taxi.png",
+    "Unicamp/MC536 - Bancos de Dados.md",
+    "Linguagens de Programação/JavaScript/Angular.md",
+    "Git.md",
     "Banco de Conhecimento.md",
+    "Linguagens de Programação/JavaScript/JavaScript.md",
+    "Linguagens de Programação/Linguagens de Programação.md",
+    "Linguagens de Programação/JavaScript",
+    "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
     "Planejamento.md",
     "CM3033.md",
     "Linguagens de Programação/Python/Django.md",
@@ -158,17 +157,12 @@
     "Linguagens de Programação/Python/NumPy.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Linguagens de Programação/Python/Python.md",
-    "Escrita/Markdown.md",
     "Linguagens de Programação/Python/SciPy.md",
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Unicamp/MC202 - Estruturas de Dados.md",
     "Unicamp/MC322 - Programação Orientada a Objetos.md",
     "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
-    "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
     "Kanban sem título.md",
-    "Escrita/Escrita.md",
-    "Escrita/LaTeX.md",
-    "templates/templates.md",
-    "(link-para-a-imagem).md"
+    "Escrita/Escrita.md"
   ]
 }
