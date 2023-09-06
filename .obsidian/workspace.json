@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f797b323bfdd041f",
+        "id": "aa6fc95f87ed1db3",
         "type": "tabs",
         "children": [
           {
-            "id": "bb2c3d98bd8562f6",
+            "id": "5976d21684940043",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Unicamp/MS211 - Cálculo Numérico.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -34,7 +29,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fbb4008e85b4ba51",
+            "id": "0e78f2dc78e130b5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -65,21 +60,12 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "9e51fdd2be1204d4",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 236.5,
-    "collapsed": true
+    "width": 236.5
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -90,13 +76,44 @@
         "type": "tabs",
         "children": [
           {
+            "id": "46aa85eb60459c13",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "c1dbda51c2197a71",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {}
+            }
+          },
+          {
             "id": "e80f4224292ca4f7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8c8cf84b420fdef5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -113,53 +130,44 @@
             }
           },
           {
-            "id": "46aa85eb60459c13",
+            "id": "da4d20b9bf5c64f8",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "Unicamp/MS211 - Cálculo Numérico.md"
-              }
-            }
-          },
-          {
-            "id": "e15eb5bb6b3ff3ab",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Unicamp/MS211 - Cálculo Numérico.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 306.5,
+    "width": 361.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "graph:Abrir visualização em gráfico": false,
-      "switcher:Abrir a troca rápida": false,
+      "switcher:Abrir a troca rápida": true,
       "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Abrir paleta de comandos": true
     }
   },
-  "active": "bb2c3d98bd8562f6",
+  "active": "5976d21684940043",
   "lastOpenFiles": [
-    "Unicamp/images/ms211-03-fibonnaci.png",
+    "Banco de Conhecimento.md",
+    "templates/anotações.md",
+    "Planejamento.md",
+    "Cloud Computing.md",
     "Unicamp/MS211 - Cálculo Numérico.md",
+    "Unicamp/Unicamp.md",
+    "CM3033.md",
+    "Linguagens de Programação/SQL.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Escrita/Markdown.md",
+    "Linguagens de Programação/Octave.md",
+    "Escrita/LaTeX.md",
+    "Linguagens de Programação/Python/NumPy.md",
+    "Unicamp/images/ms211-03-fibonnaci.png",
     "Unicamp/images/ms211-05-script.png",
     "Unicamp/images/ms211-02-cos2x.png",
     "Unicamp/images/ms211-01-cosx.png",
@@ -171,19 +179,11 @@
     "Captura de tela 2023-08-16 151706.png",
     "untitled.png",
     "Captura de tela 2023-08-16 120917.png",
-    "Linguagens de Programação/Octave.md",
     "octave-online-line-13.png",
-    "Escrita/Markdown.md",
-    "Linguagens de Programação/Python/NumPy.md",
-    "Linguagens de Programação/Python/Django.md",
-    "Cloud Computing.md",
-    "Banco de Conhecimento.md",
     "Linguagens de Programação/JavaScript/JavaScript.md",
     "Linguagens de Programação/Linguagens de Programação.md",
     "Linguagens de Programação/JavaScript",
     "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
-    "Planejamento.md",
-    "CM3033.md",
     "Linguagens de Programação/R.md",
     "Linguagens de Programação/Haskell.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
@@ -192,8 +192,6 @@
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Unicamp/MC202 - Estruturas de Dados.md",
     "Unicamp/MC322 - Programação Orientada a Objetos.md",
-    "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
-    "Kanban sem título.md",
-    "Escrita/Escrita.md"
+    "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md"
   ]
 }

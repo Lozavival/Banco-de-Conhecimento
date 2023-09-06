@@ -20,5 +20,8 @@
   "useTab": false,
   "tabSize": 4,
   "rightToLeft": false,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "propertiesInDocument": "hidden",
+  "vimMode": false,
+  "showUnsupportedFiles": true
 }
