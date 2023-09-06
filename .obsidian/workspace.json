@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bad195bf6ca7b983",
+        "id": "f797b323bfdd041f",
         "type": "tabs",
         "children": [
           {
-            "id": "64d09a3deff7dc8b",
+            "id": "bb2c3d98bd8562f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Escrita/LaTeX.md",
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -65,6 +65,14 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "9e51fdd2be1204d4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -82,6 +90,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "e80f4224292ca4f7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
             "id": "bb509d984fe1a311",
             "type": "leaf",
             "state": {
@@ -98,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Escrita/LaTeX.md"
+                "file": "Unicamp/MS211 - Cálculo Numérico.md"
               }
             }
           },
@@ -108,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Escrita/LaTeX.md",
+                "file": "Unicamp/MS211 - Cálculo Numérico.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,11 +140,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 285.5,
+    "width": 306.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -132,18 +152,31 @@
       "graph:Abrir visualização em gráfico": false,
       "switcher:Abrir a troca rápida": false,
       "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "64d09a3deff7dc8b",
+  "active": "bb2c3d98bd8562f6",
   "lastOpenFiles": [
+    "Unicamp/images/ms211-03-fibonnaci.png",
+    "Unicamp/MS211 - Cálculo Numérico.md",
+    "Unicamp/images/ms211-05-script.png",
+    "Unicamp/images/ms211-02-cos2x.png",
+    "Unicamp/images/ms211-01-cosx.png",
+    "Unicamp/images/ms211-04-customizado.png",
+    "MS211 - Cálculo Numérico.md",
+    "Unicamp/images",
+    "Sem título",
+    "untitled2.png",
+    "Captura de tela 2023-08-16 151706.png",
+    "untitled.png",
+    "Captura de tela 2023-08-16 120917.png",
+    "Linguagens de Programação/Octave.md",
+    "octave-online-line-13.png",
     "Escrita/Markdown.md",
-    "Escrita/LaTeX.md",
-    "Linguagens de Programação/SQL.md",
-    "Unicamp/mc536-sistema_taxi.png",
-    "Unicamp/MC536 - Bancos de Dados.md",
-    "Linguagens de Programação/JavaScript/Angular.md",
-    "Git.md",
+    "Linguagens de Programação/Python/NumPy.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Cloud Computing.md",
     "Banco de Conhecimento.md",
     "Linguagens de Programação/JavaScript/JavaScript.md",
     "Linguagens de Programação/Linguagens de Programação.md",
@@ -151,10 +184,8 @@
     "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
     "Planejamento.md",
     "CM3033.md",
-    "Linguagens de Programação/Python/Django.md",
     "Linguagens de Programação/R.md",
     "Linguagens de Programação/Haskell.md",
-    "Linguagens de Programação/Python/NumPy.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Linguagens de Programação/Python/Python.md",
     "Linguagens de Programação/Python/SciPy.md",
