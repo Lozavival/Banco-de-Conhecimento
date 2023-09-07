@@ -1,15 +1,8 @@
----
-tags: python, ciência-de-dados, bibliotecas
----
-
 # SciPy
 
-Descrição
+**Palavras-chave:** #python, #ciência-de-dados, #bibliotecas
 
----
-
-```toc
-```
+<descrição>
 
 ---
 

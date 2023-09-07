@@ -1,15 +1,8 @@
----
-tags: linguagens
----
+# Haskell
 
-# 
+**Palavras-chave:** #linguagens
 
-Descrição
-
----
-
-```toc
-```
+<descrição>
 
 ---
 

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8ae79569e7ffee94",
+        "id": "8ef81dfffebfa7a4",
         "type": "tabs",
         "children": [
           {
-            "id": "a305095fd3577193",
+            "id": "39a94343fcb95fd9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -137,7 +137,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -152,11 +153,21 @@
       "command-palette:Abrir paleta de comandos": true
     }
   },
-  "active": "0e78f2dc78e130b5",
+  "active": "39a94343fcb95fd9",
   "lastOpenFiles": [
-    "Escrita/Markdown.md",
-    "Escrita/LaTeX.md",
-    "Escrita/Escrita.md",
+    "Unicamp/images/mc536-sistema_taxi.png",
+    "Cloud Computing.md",
+    "CM3033.md",
+    "Unicamp/MS211 - Cálculo Numérico.md",
+    "Unicamp/MC536 - Bancos de Dados.md",
+    "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
+    "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
+    "Sem título.md",
+    "Unicamp/MC322 - Programação Orientada a Objetos.md",
+    "Sem título 1.md",
+    "Unicamp/MC202 - Estruturas de Dados.md",
+    "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
+    "Linguagens de Programação/Haskell.md",
     "Linguagens de Programação/Python/SciPy.md",
     "Linguagens de Programação/Python/Python.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
@@ -164,22 +175,12 @@
     "Linguagens de Programação/Python/Matplotlib.md",
     "Linguagens de Programação/Python/Django.md",
     "Linguagens de Programação/Python/Ambientes Virtuais.md",
-    "Linguagens de Programação/SQL.md",
-    "Linguagens de Programação/R.md",
     "Linguagens de Programação/Octave.md",
-    "Linguagens de Programação/Linguagens de Programação.md",
-    "Linguagens de Programação/Haskell.md",
-    "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
-    "Unicamp/MC202 - Estruturas de Dados.md",
-    "Unicamp/MC322 - Programação Orientada a Objetos.md",
-    "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
-    "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
-    "Unicamp/MC536 - Bancos de Dados.md",
-    "Unicamp/MS211 - Cálculo Numérico.md",
-    "Banco de Conhecimento.md",
-    "Cloud Computing.md",
-    "Planejamento.md",
-    "templates/anotações.md",
+    "Linguagens de Programação/R.md",
+    "Linguagens de Programação/SQL.md",
+    "Escrita/Markdown.md",
+    "Escrita/LaTeX.md",
+    "Escrita/Escrita.md",
     "Unicamp/images/ms211-03-fibonnaci.png",
     "Unicamp/images/ms211-05-script.png",
     "Unicamp/images/ms211-02-cos2x.png",
@@ -191,7 +192,6 @@
     "Captura de tela 2023-08-16 151706.png",
     "untitled.png",
     "Captura de tela 2023-08-16 120917.png",
-    "octave-online-line-13.png",
     "Linguagens de Programação/JavaScript"
   ]
 }

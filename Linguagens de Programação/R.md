@@ -1,15 +1,8 @@
----
-tags: ciência-de-dados, linguagens
----
-
 # R
 
+**Palavras-chave:** #ciência-de-dados, #linguagens
+
 R é uma linguagem de programação multi-paradigma interpretada voltada à manipulação, análise e visualização de dados.
-
----
-
-```toc
-```
 
 ---
 

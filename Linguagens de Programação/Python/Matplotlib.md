@@ -1,15 +1,8 @@
----
-tags: python, bibliotecas, ciência-de-dados
----
+# Matplotlib
 
-# 
+**Palavras-chave:** #python, #bibliotecas, #ciência-de-dados
 
-Descrição
-
----
-
-```toc
-```
+<descrição>
 
 ---
 

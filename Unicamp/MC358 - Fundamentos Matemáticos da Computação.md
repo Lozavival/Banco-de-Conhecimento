@@ -1,15 +1,8 @@
----
-tags: 
----
+# MC358 - Fundamentos Matemáticos da Computação
 
-# 
+**Palavras-chave:**
 
-Descrição
-
----
-
-```toc
-```
+<descrição>
 
 ---
 

@@ -1,15 +1,10 @@
----
-tags: python, python-impressionador, framework, web
----
-
 # Criação de Sites com Django
+
+**Palavras-chave:** #python, #python-impressionador, #framework, #web
 
 Segundo a própria documentação, "Django é um framework web de Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção".
 
 ---
-
-```toc
-```
 
 ## Pré-requisitos
 

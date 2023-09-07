@@ -1,8 +1,6 @@
----
-tags: escrita, marcação
----
-
 # Markdown
+
+**Palavras-chave:** #escrita, #marcação
 
 *Markdown* é uma linguagem de marcação e formatação de texto voltada para a escrita de documentos. Os formatos são introduzidos no texto na forma de símbolos simples, intuitivos e semelhantes ao resultado final. Os documentos são escritos e armazenados em texto pleno e convertidos para HTML para visualização.
 
@@ -10,21 +8,21 @@ tags: escrita, marcação
 
 ## Tabela de Conteúdos
 
-- [Folha de Consulta](#Folha%20de%20Consulta)
-	- [Titulações](#Titulações)
-	- [Parágrafos e Quebras de Linha](#Parágrafos%20e%20Quebras%20de%20Linha)
-	- [Ênfase de Texto](#Ênfase%20de%20Texto)
-	- [Citações em Bloco](#Citações%20em%20Bloco)
-	- [Listas](#Listas)
-		- [Lista de Tarefas](#Lista%20de%20Tarefas)
-		- [Lista de Definições](#Lista%20de%20Definições)
-	- [Equações](#Equações)
-	- [Blocos de Código](#Blocos%20de%20Código)
-	- [Links](#Links)
-	- [Imagens](#Imagens)
-	- [Tabelas](#Tabelas)
-	- [Linhas Horizontais](#Linhas%20Horizontais)
-- [Referências](#Referências)
+1. [Folha de Consulta](#folha-de-consulta)
+	1. [Titulações](#titula%C3%A7%C3%B5es)
+	1. [Parágrafos e Quebras de Linha](#par%C3%A1grafos-e-quebras-de-linha)
+	1. [Ênfase de Texto](#%C3%8Anfase-de-texto)
+	1. [Citações em Bloco](#cita%C3%A7%C3%B5es-em-bloco)
+	1. [Listas](#listas)
+		1. [Lista de Tarefas](#lista-de-tarefas)
+		1. [Lista de Definições](#lista-de-defini%C3%A7%C3%B5es)
+	1. [Equações](#equa%C3%A7%C3%B5es)
+	1. [Blocos de Código](#blocos-de-c%C3%B3digo)
+	1. [Links](#links)
+	1. [Imagens](#imagens)
+	1. [Tabelas](#tabelas)
+	1. [Linhas Horizontais](#linhas-horizontais)
+1. [Referências](#refer%C3%AAncias)
 
 ---
 

@@ -1,15 +1,8 @@
----
-tags: 
----
-
 # Cloud Computing
 
-Descrição
+**Palavras-chave:**
 
----
-
-```toc
-```
+<descrição>
 
 ---
 

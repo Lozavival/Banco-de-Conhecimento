@@ -1,15 +1,8 @@
----
-tags: c-c++, unicamp, estruturas-dados
----
+# MC202 - Estruturas de Dados
 
-# 
+**Palavras-chave:** #c/cpp, #unicamp, #estruturas-dados
 
-Descrição
-
----
-
-```toc
-```
+<descrição>
 
 ---
 

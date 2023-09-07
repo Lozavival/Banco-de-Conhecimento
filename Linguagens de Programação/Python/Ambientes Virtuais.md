@@ -1,8 +1,6 @@
----
-tags: python, python-impressionador
----
-
 # Ambientes Virtuais em Python
+
+**Palavras-chave:** #python, #python-impressionador
 
 Um ambiente virtual empacota todas as dependências de um projeto e as armazena em um diretório, fazendo com que nenhum pacote seja instalado diretamente no sistema operacional. Sendo assim, cada projeto pode possuir seu próprio ambiente e, consequentemente, suas bibliotecas ou até mesmo o Python em versões específicas.
 
@@ -14,18 +12,18 @@ Isso possibilita que possamos, por exemplo:
 
 ## Tabela de Conteúdos
 
-- [venv](#venv)
-	- [Criação do Ambiente Virtual](#venv#Criação%20do%20Ambiente%20Virtual)
-	- [Ativação e Desativação do Ambiente Virtual](#venv#Ativação%20e%20Desativação%20do%20Ambiente%20Virtual)
-	- [Replicando Ambientes Virtuais](#venv#Replicando%20Ambientes%20Virtuais)
-	- [Configuração de Variáveis de Ambiente](#venv#Configuração%20de%20Variáveis%20de%20Ambiente)
-- [Conda](#Conda)
-	- [Criação do Ambiente Virtual](#Conda#Criação%20do%20Ambiente%20Virtual)
-		- [Especificando a Localização do Ambiente](#Criação%20do%20Ambiente%20Virtual#Especificando%20a%20Localização%20do%20Ambiente)
-	- [Ativação e Desativação do Ambiente Virtual](#Conda#Ativação%20e%20Desativação%20do%20Ambiente%20Virtual)
-	- [Replicando Ambientes Virtuais](#Conda#Replicando%20Ambientes%20Virtuais)
-	- [Configuração de Variáveis de Ambiente](#Conda#Configuração%20de%20Variáveis%20de%20Ambiente)
-- [Referências](#Referências)
+1. [venv](#venv)
+	1. [Criação do Ambiente Virtual](#cria%C3%A7%C3%A3o-do-ambiente-virtual)
+	1. [Ativação e Desativação do Ambiente Virtual](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual)
+	1. [Replicando Ambientes Virtuais](#replicando-ambientes-virtuais)
+	1. [Configuração de Variáveis de Ambiente](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente)
+1. [Conda](#conda)
+	1. [Criação do Ambiente Virtual](#cria%C3%A7%C3%A3o-do-ambiente-virtual)
+		1. [Especificando a Localização do Ambiente](#especificando-a-localiza%C3%A7%C3%A3o-do-ambiente)
+	1. [Ativação e Desativação do Ambiente Virtual](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual)
+	1. [Replicando Ambientes Virtuais](#replicando-ambientes-virtuais)
+	1. [Configuração de Variáveis de Ambiente](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente)
+1. [Referências](#refer%C3%AAncias)
 
 ---
 

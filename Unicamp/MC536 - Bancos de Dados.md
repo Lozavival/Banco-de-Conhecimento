@@ -1,15 +1,8 @@
----
-tags: 
----
-
 # MC536 - Bancos de Dados
 
-Descrição
+**Palavras-chave:**
 
----
-
-```toc
-```
+<descrição>
 
 ---
 
@@ -427,3 +420,7 @@ CASE
 END AS texto_idade
 FROM taxi;
 ```
+
+---
+
+## Referências

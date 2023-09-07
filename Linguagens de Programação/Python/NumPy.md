@@ -1,15 +1,8 @@
----
-tags: python, bibliotecas, ciência-de-dados
----
-
 # NumPy
 
+**Palavras-chave:** #python, #bibliotecas, #ciência-de-dados
+
 NumPy (Numerical Python) é o pacote fundamental para computação científica em Python. Ele é uma biblioteca que fornece um objeto de array multidimensional e uma seleção de rotinas para operações rápidas em arrays, incluindo manipulação matemática e lógica, ordenação, transformada discreta de Fourier, álgebra linear básica, operações básicas de estatísticas e muito mais.
-
----
-
-```toc
-```
 
 ---
 

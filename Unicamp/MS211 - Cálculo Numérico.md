@@ -1,19 +1,12 @@
----
-tags: 
----
-
 # MS211 - Cálculo Numérico
+
+**Palavras-chave:**
 
 Notas de aula tomadas ao longo da disciplina MS211 - Cálculo Numérico, ministrada pelo professor Ricardo Biloti e oferecido da Universidade Estadual de Campinas (Unicamp).
 
 Para produção destas notas, foram utilizadas como referências os conteúdos expostos nas aulas presenciais ministradas pelo professor Biloti, bem como o [curso online][] oferecido por ele. A estrutura deste documento segue a estrutura em que as aulas estão organizadas no [curso online][].
 
 [curso online]: https://www.ime.unicamp.br/~biloti/an/211/index.html
-
----
-
-```toc
-```
 
 ---
 
