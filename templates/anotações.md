@@ -1,15 +1,8 @@
----
-tags: 
----
+# {{title}}
 
-# 
+**Palavras-chave:**
 
-Descrição
-
----
-
-```toc
-```
+<descrição>
 
 ---
 
