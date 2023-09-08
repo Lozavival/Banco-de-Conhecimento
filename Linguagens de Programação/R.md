@@ -29,7 +29,7 @@ A linguagem R possui uma capacidade natural para operar com vetores e matrizes. 
 # Cálculo de medidas de posição e de dispersão do Exemplo 5  
 # Entrada dos dados (atribuição de vetor a uma variável)  
 D <- c(0.92, 0.8, 0.91, 0.89, 0.83, 0.72, 0.8, 0.69,
-	   0.63, 0.71, 0.61, 0.68)
+       0.63, 0.71, 0.61, 0.68)
 
 # Medidas de posição  
 mean(D) # Média amostral  

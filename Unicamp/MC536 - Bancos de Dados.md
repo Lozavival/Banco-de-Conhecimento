@@ -73,7 +73,7 @@ FOREIGN KEY <coluna> REFERENCES <tabela_ref>(<coluna_ref>)
 
 Por exemplo, para criar um banco para um sistema de táxi (modelado na imagem abaixo), podemos utilizar o seguinte script:
 
-![Diagrama ER do Sistema de Táxi](mc536-sistema_taxi.png)
+![Diagrama ER do Sistema de Táxi](mc536-01-sistema_taxi.png)
 
 ```sql
 CREATE DATABASE sistema_taxi;

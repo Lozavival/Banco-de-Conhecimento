@@ -9,20 +9,20 @@
 ## Tabela de Conteúdos
 
 1. [Folha de Consulta](#folha-de-consulta)
-	1. [Titulações](#titula%C3%A7%C3%B5es)
-	1. [Parágrafos e Quebras de Linha](#par%C3%A1grafos-e-quebras-de-linha)
-	1. [Ênfase de Texto](#%C3%8Anfase-de-texto)
-	1. [Citações em Bloco](#cita%C3%A7%C3%B5es-em-bloco)
-	1. [Listas](#listas)
-		1. [Lista de Tarefas](#lista-de-tarefas)
-		1. [Lista de Definições](#lista-de-defini%C3%A7%C3%B5es)
-	1. [Equações](#equa%C3%A7%C3%B5es)
-	1. [Blocos de Código](#blocos-de-c%C3%B3digo)
-	1. [Links](#links)
-	1. [Imagens](#imagens)
-	1. [Tabelas](#tabelas)
-	1. [Linhas Horizontais](#linhas-horizontais)
-1. [Referências](#refer%C3%AAncias)
+    1. [Titulações](#titulações)
+    1. [Parágrafos e Quebras de Linha](#parágrafos-e-quebras-de-linha)
+    1. [Ênfase de Texto](#ênfase-de-texto)
+    1. [Citações em Bloco](#citações-em-bloco)
+    1. [Listas](#listas)
+        1. [Lista de Tarefas](#lista-de-tarefas)
+        1. [Lista de Definições](#lista-de-definições)
+    1. [Equações](#equações)
+    1. [Blocos de Código](#blocos-de-código)
+    1. [Links](#links)
+    1. [Imagens](#imagens)
+    1. [Tabelas](#tabelas)
+    1. [Linhas Horizontais](#linhas-horizontais)
+1. [Referências](#referências)
 
 ---
 
@@ -168,7 +168,8 @@ Marcadores de lista devem ser seguidos por um ou mais espaços ou um tab. Uma bo
 *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
     Suspendisse id sem consectetuer libero luctus adipiscing.
 ```
-```
+
+```markdown
 1.  Esta é uma lista com dois parágrafos. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit. Aliquam hendrerit
     mi posuere lectus.
@@ -179,7 +180,8 @@ Marcadores de lista devem ser seguidos por um ou mais espaços ou um tab. Uma bo
 
 2.  Suspendisse id sem consectetuer libero luctus adipiscing.
 ```
-```
+
+```markdown
 *   Esta é uma lista com dois parágrafos.
 
     Este é o segundo parágrafo da lista de itens. Só é
@@ -243,12 +245,12 @@ Para indicar um espaço de código, envolva-o com caracteres de crase (`` ` ``):
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print(s)
 ```
- 
+
 ```
 Como nenhuma linguagem foi especificada, não há destaque de sintaxe.
 ```
@@ -259,12 +261,12 @@ Alternativamente, podemos utilizar indentação como formar de gerar blocos form
 ```markdown
 Isto é um parágrafo normal.
 
-	Isto é um bloco formatado como código.
+    Isto é um bloco formatado como código.
 
 O trecho abaixo é um código em Python:
 
-	for i in x:
-		do_something()
+    for i in x:
+        do_something()
 ```
 
 ### Links
@@ -319,6 +321,7 @@ Imagem sem texto alternativo: ![](link-para-a-imagem)
 Imagens, tal como links, também suportam links inline e links por referência.
 
 Também é possível utilizar imagens como link. Para isso, basta inserir a imagem entre os colchetes do link:
+
 ```markdown
 [![texto-alternativo](link-da-imagem)](link-de-redirecionamento)
 ```
@@ -328,10 +331,11 @@ Por fim, Markdown não possui sintaxe para especificar as dimensões de uma imag
 ### Tabelas
 
 Para criar uma tabela, o seguinte procedimento deve ser seguido:
+
 1. As colunas, bem como as bordas da tabela, devem ser delimitadas por caracteres pipe (`|`).
 2. As duas primeiras linhas da tabela correspondem a seu cabeçalho:
-	- Na primeira linha, escrevemos os títulos das colunas;
-	- A segunda linha deve incluir no mínimo três hifens (`-`), indicando a separação entre o cabeçalhos e as outras linhas da tabela.
+    - Na primeira linha, escrevemos os títulos das colunas;
+    - A segunda linha deve incluir no mínimo três hifens (`-`), indicando a separação entre o cabeçalhos e as outras linhas da tabela.
 3. As colunas seguintes devem ser adicionadas entre pipes, na mesma quantidade do cabeçalho:
 
 ```markdown
@@ -342,6 +346,7 @@ Para criar uma tabela, o seguinte procedimento deve ser seguido:
 ```
 
 Algumas das boas práticas ao criar tabelas em Markdown são:
+
 - Alinhar as colunas do documento;
 - Adicionar um número hifens correspondente ao comprimento do título da coluna;
 - Envolver os separadores de colunas por espaços em branco (antes e depois).

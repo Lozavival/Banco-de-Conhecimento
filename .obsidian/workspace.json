@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8ef81dfffebfa7a4",
+        "id": "6ba0333ca7300fb9",
         "type": "tabs",
         "children": [
           {
-            "id": "39a94343fcb95fd9",
+            "id": "ec96af4c80c3573b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -137,8 +138,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -153,13 +153,17 @@
       "command-palette:Abrir paleta de comandos": true
     }
   },
-  "active": "39a94343fcb95fd9",
+  "active": "0e78f2dc78e130b5",
   "lastOpenFiles": [
-    "Unicamp/images/mc536-sistema_taxi.png",
+    "Unicamp/MC536 - Bancos de Dados.md",
+    "Unicamp/images/mc536-01-sistema_taxi.png",
+    "Linguagens de Programação/Python/Ambientes Virtuais.md",
+    "Linguagens de Programação/Python/Django.md",
+    "Escrita/Markdown.md",
+    "Linguagens de Programação/Python/Python.md",
     "Cloud Computing.md",
     "CM3033.md",
     "Unicamp/MS211 - Cálculo Numérico.md",
-    "Unicamp/MC536 - Bancos de Dados.md",
     "Unicamp/MC404 - Organização Básica de Computadores e Linguagem de Montagem.md",
     "Unicamp/MC358 - Fundamentos Matemáticos da Computação.md",
     "Sem título.md",
@@ -169,16 +173,12 @@
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Linguagens de Programação/Haskell.md",
     "Linguagens de Programação/Python/SciPy.md",
-    "Linguagens de Programação/Python/Python.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Linguagens de Programação/Python/NumPy.md",
     "Linguagens de Programação/Python/Matplotlib.md",
-    "Linguagens de Programação/Python/Django.md",
-    "Linguagens de Programação/Python/Ambientes Virtuais.md",
     "Linguagens de Programação/Octave.md",
     "Linguagens de Programação/R.md",
     "Linguagens de Programação/SQL.md",
-    "Escrita/Markdown.md",
     "Escrita/LaTeX.md",
     "Escrita/Escrita.md",
     "Unicamp/images/ms211-03-fibonnaci.png",
