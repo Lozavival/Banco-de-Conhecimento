@@ -14,5 +14,28 @@
       ],
       "key": "ArrowUp"
     }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
   ]
 }

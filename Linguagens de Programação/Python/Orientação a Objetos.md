@@ -1,15 +1,8 @@
----
-tags: python, python-impressionador, paradigmas, poo
----
-
 # OO - Orientação a Objetos
 
-Descrição
+**Palavras-chave:** #python, #python-impressionador, #paradigmas, #poo
 
----
-
-```toc
-```
+<descrição>
 
 ---
 

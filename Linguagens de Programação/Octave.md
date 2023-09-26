@@ -1,15 +1,8 @@
----
-tags: 
----
-
 # Octave
 
-Descrição
+**Palavras-chave:**
 
----
-
-```toc
-```
+<descrição>
 
 ---
 
@@ -40,7 +33,7 @@ A tabela abaixo lista alguns formatos possíveis:
 | `format short`   | 5 dígitos significativos                         |
 | `format long`    | 16 dígitos significativos                        |
 | `format short e` | Notação científica com 5 dígitos significativos  |
-| `format long e`  | Notação científica com 16 dígitos significativos | 
+| `format long e`  | Notação científica com 16 dígitos significativos |
 | `format short g` | 5 dígitos no total                               |
 | `format long g`  | 16 dígitos no total                              |
 | `format bank`    | 2 dígitos decimais                               |
@@ -208,11 +201,11 @@ matrix = [vector1; vector2]
 | Função | Descrição                                    |
 | ------ | -------------------------------------------- |
 | length | Retorna o número de elementos de uma matriz. |
-| size   | Retorna um vetor contendo a ordem da matriz. | 
+| size   | Retorna um vetor contendo a ordem da matriz. |
 
 ### Operações Matemáticas com Matrizes
 
-Há dois tipos de operadores matemáticos para matrizes: os operadores matemáticos convecionais realizam a operação de matrizes, enquanto de adicionarmos um ponto será feita a operação elemento-a-elemento.
+Há dois tipos de operadores matemáticos para matrizes: os operadores matemáticos convencionais realizam a operação de matrizes, enquanto de adicionarmos um ponto será feita a operação elemento-a-elemento.
 
 Como a adição e subtração de matrizes é, por definição, a respectiva operação calculada elemento a elemento, não haverá diferença no resultado:
 
@@ -281,7 +274,7 @@ ans =
 - `eye(5, 5)`
 - `rand(5, 7)` -> $[0, 1]$
 - `randn(5, 7)` -> $[-1, 1]$ (n = normal)
-- `randi(100, 5, 7)` -> $[0, n]$ (i = integers). Podemos passar também um valor mínimo: `randi([5 15], 5, 7)`. Se não passar as dimenões, gera um número aleatório.
+- `randi(100, 5, 7)` -> $[0, n]$ (i = integers). Podemos passar também um valor mínimo: `randi([5 15], 5, 7)`. Se não passar as dimensões, gera um número aleatório.
 
 ### Indexação de Matrizes
 
@@ -443,7 +436,7 @@ disp(formatted_string)
 
 ## Armazenado Input do Usuário
 
-Para pegar o input do usuário, utilizamos a função `input()` e, como argumentos, podemos passar um *prompt* que será exibido ao usuário, assim como em Pyhton:
+Para pegar o input do usuário, utilizamos a função `input()` e, como argumentos, podemos passar um *prompt* que será exibido ao usuário, assim como em Python:
 
 ```Matlab
 user_number = input("Give me a number: ")

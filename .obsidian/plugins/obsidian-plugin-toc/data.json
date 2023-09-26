@@ -1,8 +1,8 @@
 {
   "minimumDepth": 2,
   "maximumDepth": 6,
-  "listStyle": "bullet",
+  "listStyle": "number",
   "useMarkdown": true,
-  "title": "## Tabela de Conteúdos",
+  "title": "---\\n\\n## Tabela de Conteúdos",
   "githubCompat": true
 }

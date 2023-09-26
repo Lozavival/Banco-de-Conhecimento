@@ -1,15 +1,8 @@
----
-tags: escrita, marcação
----
-
 # LaTeX
 
+**Palavras-chave:** #escrita, #marcação
+
 LaTeX é um sistema de marcação voltado à preparação e editoração de documentos técnicos e científicos de alta qualidade tipográfica. Sua ideia central é encorajar o usuário a pensar primariamente na estrutura e conteúdo do texto, distanciando-se da apresentação visual da informação (ou seja, escrever primeiro e formatar depois).
-
----
-
-```toc
-```
 
 ---
 
