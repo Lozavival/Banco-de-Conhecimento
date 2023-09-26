@@ -30,7 +30,7 @@ Isso possibilita que possamos, por exemplo:
 
 ## venv
 
-`venv` é um módulo nativo do Pyhton com suporte para criação de ambientes virtuais leves,
+`venv` é um módulo nativo do Python com suporte para criação de ambientes virtuais leves,
 
 ### Criação do Ambiente Virtual (venv)
 

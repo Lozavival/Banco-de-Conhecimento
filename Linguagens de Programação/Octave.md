@@ -274,7 +274,7 @@ ans =
 - `eye(5, 5)`
 - `rand(5, 7)` -> $[0, 1]$
 - `randn(5, 7)` -> $[-1, 1]$ (n = normal)
-- `randi(100, 5, 7)` -> $[0, n]$ (i = integers). Podemos passar também um valor mínimo: `randi([5 15], 5, 7)`. Se não passar as dimenões, gera um número aleatório.
+- `randi(100, 5, 7)` -> $[0, n]$ (i = integers). Podemos passar também um valor mínimo: `randi([5 15], 5, 7)`. Se não passar as dimensões, gera um número aleatório.
 
 ### Indexação de Matrizes
 
@@ -436,7 +436,7 @@ disp(formatted_string)
 
 ## Armazenado Input do Usuário
 
-Para pegar o input do usuário, utilizamos a função `input()` e, como argumentos, podemos passar um *prompt* que será exibido ao usuário, assim como em Pyhton:
+Para pegar o input do usuário, utilizamos a função `input()` e, como argumentos, podemos passar um *prompt* que será exibido ao usuário, assim como em Python:
 
 ```Matlab
 user_number = input("Give me a number: ")
