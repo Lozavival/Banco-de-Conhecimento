@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b0537c3d097db3bd",
+        "id": "211dbb8fe0e15b38",
         "type": "tabs",
         "children": [
           {
-            "id": "ecf7127437893054",
+            "id": "918e86081a5eb66b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Tecnologias/Vim.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
     "id": "61e6833c746d3e2d",
@@ -81,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Planejamento.md"
+                "file": "Tecnologias/Vim.md"
               }
             }
           },
@@ -91,7 +97,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Planejamento.md"
+                "file": "Tecnologias/Vim.md"
               }
             }
           },
@@ -101,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Planejamento.md",
+                "file": "Tecnologias/Vim.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Planejamento.md",
+                "file": "Tecnologias/Vim.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,14 +174,20 @@
       "command-palette:Abrir paleta de comandos": true
     }
   },
-  "active": "0e78f2dc78e130b5",
+  "active": "918e86081a5eb66b",
   "lastOpenFiles": [
+    "Sem título.md",
+    "Tecnologias/Vim.md",
+    "Escrita/Markdown.md",
+    "Escrita/LaTeX.md",
+    "Tecnologias/Tecnologias.md",
+    "Escrita/Escrita.md",
+    "Linguagens de Programação/Linguagens de Programação.md",
     "Linguagens de Programação/R.md",
     "Planejamento.md",
     "Banco de Conhecimento.md",
-    "Cloud Computing.md",
+    "Tecnologias/Cloud Computing.md",
     "CM3033.md",
-    "Linguagens de Programação/Linguagens de Programação.md",
     "templates/índice.md",
     "Unicamp/Unicamp.md",
     "Unicamp/MS211 - Cálculo Numérico.md",
@@ -190,12 +202,6 @@
     "Linguagens de Programação/Python/SciPy.md",
     "Linguagens de Programação/Python/Orientação a Objetos.md",
     "Linguagens de Programação/Python/Django.md",
-    "Linguagens de Programação/Python/Matplotlib.md",
-    "Linguagens de Programação/Python/Ambientes Virtuais.md",
-    "Linguagens de Programação/SQL.md",
-    "Linguagens de Programação/Octave.md",
-    "Linguagens de Programação/Haskell.md",
-    "Escrita/Markdown.md",
     "Unicamp/images/ms211-05-script.png",
     "Unicamp/images/mc536-01-sistema_taxi.png",
     "Unicamp/images/ms211-03-fibonnaci.png",

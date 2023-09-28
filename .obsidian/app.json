@@ -22,6 +22,6 @@
   "rightToLeft": false,
   "useMarkdownLinks": true,
   "propertiesInDocument": "hidden",
-  "vimMode": false,
+  "vimMode": true,
   "showUnsupportedFiles": true
 }
