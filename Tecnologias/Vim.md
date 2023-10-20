@@ -16,9 +16,10 @@ A estrutura e conteúdo deste documento são baseadas principalmente nas [págin
 ### Resumo da Lição 1
 
 1. O cursor pode ser movido por meio das teclas de seta ou das teclas hjkl: h para esquerda, j para baixo, k para cima e l para a direita.
-2. Para sair do Vim, podemos utilizar o comando `:q!` para descartar as mudanças ou `:wq` para salvar as mudanças.
-3. Para deletar o caractere abaixo do cursor (no modo Normal), utilizamos a tecla `x`.
-4. Para inserir ou anexar texto, utilizamos:
+1. Para iniciar Vim a partir do terminal, digite `vim FILENAME`.
+1. Para sair do Vim, podemos utilizar o comando `:q!` para descartar as mudanças ou `:wq` para salvar as mudanças.
+1. Para deletar o caractere abaixo do cursor (no modo Normal), utilizamos a tecla `x`.
+1. Para inserir ou anexar texto, utilizamos:
     - `i` para inserir antes do cursor;
     - `A` para anexar ao final da linha.
 
@@ -42,9 +43,9 @@ A estrutura e conteúdo deste documento são baseadas principalmente nas [págin
 
 ### Resumo da Lição 3
 
-1. Para reinserir um texto que já foi apagado, digite `p`. Isso coloca o texto deletado **após** o cursor.
+1. Para reinserir um texto recém apagado, digite `p`. Isso coloca o texto deletado **após** o cursor (se uma linha inteira foi deletada, ela será reinserida na linha abaixo do cursor).
 2. Para substituir o caractere sob o cursor, digite `r` e então o caractere que substituirá o original.
-3. O comando *change* (ativado por meio da tecla `c`) possibilita mudar o texto do cursor até onde o movimento for. Por exemplo, `ce` muda do cursor até o fim de uma palavra e `c$` para mudar até o fim da linha.
+3. O operador *change* (ativado por meio da tecla `c`) possibilita mudar o texto do cursor até onde o movimento for. Por exemplo, `ce` muda do cursor até o fim de uma palavra e `c$` para mudar até o fim da linha.
 
 ### Resumo da Lição 4
 
@@ -55,19 +56,25 @@ A estrutura e conteúdo deste documento são baseadas principalmente nas [págin
     - `gg` move o arquivo para a primeira linha
 2. Comandos de busca:
     - `/expressão` procura **à frente** por uma expressão
-    - `?expressão` procura pela expressão **de trás para frente**
+    - `?expressão` procura pela expressão **para trás**
     - Após uma busca, `n` encontra a próxima ocorrência (na mesma direção da busca) e `N` encontra na direção oposta.
+    - `CTRL-O` leva para posições mais antigas, enquanto `CTRL-I` leva a posições mais novas.
 3. Digitar `%` enquanto o cursor está sobre um parêntese, colchete ou chave localiza o par que casa com ele.
 4. Comandos de substituição:
     - `:s/velho/novo` para substituir o primeiro 'velho' de uma linha por 'novo'
     - `:s/velho/novo/g` para substituir todos os 'velho' em uma linha por 'novo'
     - `#,#s/velho/novo` para substituir expressões entre dois números de linha
-     - `%s/velho/novo/g` para substituir todas as ocorrências no arquivo
-     - `%s/velho/novo/gc` para substituir todas as ocorrências no arquivo, pedindo confirmação de cada substituição
+    - `%s/velho/novo/g` para substituir todas as ocorrências no arquivo
+    - Em todos os casos acima, podemos adicionar `c` ao final do comnado para pedir confirmação a cada substituição: por exemplo, `%s/velho/novo/gc`
 
 ### Resumo da Lição 5
 
-1. Pressionar `v` inicioa o modo Visual de seleção. Você pode mover o cursor pela tela para tornar a seleção maior ou menor e, então, usar um operador para executar alguma ação (por exemplo, `d` para apagar o texto selecionado).
+1. `:!comando` executa um comando externo.
+    - Por exemplo, `:ls`, `!rm FILENAME`
+1. `:w FILENAME` escreve o arquivo Vim atual no disco com o nome 'FILENAME'.
+1. Pressionar `v` inicia o modo Visual de seleção. Você pode mover o cursor pela tela para tornar a seleção maior ou menor e, então, usar um operador para executar alguma ação (por exemplo, `d` para apagar o texto selecionado).
+1. `:r FILENAME` recupera o arquivo FILENAME do disco e insere seu conteúdo abaixo da posição do cursor.
+1. `:r !dir` lê a saída do comando `dir` e coloca abaixo da posição do cursor.
 
 ### Resumo da Lição 6
 
@@ -81,8 +88,206 @@ A estrutura e conteúdo deste documento são baseadas principalmente nas [págin
     - `hls` realça todos os trechos localizados
     Adicionar o prefixo `no` desabilita uma opção: `:set noic`.
 
+### Resumo da Lição 7
+
+1. Digite `:help` ou pressione `<F1>` para abrir a janela de ajuda.
+1. Digite `:help COMMAND` para encontrar ajuda sobre COMMAND.
+1. Digite `CTRL-W CTRL-W` para alternar entre janelas.
+1. Crie um arquivo de inicialização vimrc para armazenar suas configurações.
+1. Ao digitar um comando com `:`, pressione `CTRL-D` para ver possíveis compleções e `<TAB>` para usar uma compleção.
+
+## NeuralNine - "Why Everyone Should Start Using Vim"
+
+### Comandos
+
+- `yyp`: copia a linha atual para baixo
+- `W` é uma versão melhorada do comando `w`.
+- `ci'` == "change the inner content of the quotation": quando o cursor (modo Normal) estiver dentro de uma bloco de aspas simples, deleta tudo dentro das aspas simples e muda para Insert mode.
+    - Analogamente, `di'` deleta tudo dentro das aspas simples sem mudar para o modo Inserção, `ci(` permite alterar o que está dentro dos parênteses etc.
+- `t:`: permite pular para o caractere imediatamente antes do próximo `:` (em uma mesma linha). Para pular exatamente para o `:`,  usamos `f:`.
+    - Esse comando também permite utilizar números (por exemplo, `3t:`).
+    - Podemos utilizar esse comando em conjunto com outros. Por exemplo, para deletar tudo até a próxima vírgula, podemos utilizar `dt,`.
+
+### Macros
+
+Além dos *keybinds* oferecidos pelo Vim, outra funcionalidade muito útil para melhorar a eficiência são as **macros**.
+
+Para registrar uma macro, digitamos `q` seguido de uma letra de `a` a `z` (representando o registrador em que a macro ficará salva) para começar a gravar a macro. A partir daí, todas as *keybinds* utilizadas são registradas, até o momento em que a macro é salva (por meio do comando `q`). A partir daí, podemos utilizar o comando `@a`, por exemplo, para executar a macro gravada no registrador `a`.
+
+### *Marks*
+
+Outro conceito importante são as **marcas**. Para definir uma marca, utilizamos o atalho `ma` (isso fará com que a localização atual do cursor fique armazenada em `a`). Com isso, podemos, de qualquer lugar do código, voltar para o lugar registrado por meio do comando `'a`. Também é possível utilizar letras maiúsculas para pular para marcadores através de diferentes arquivos.
+
+## NeuralNine - "Vim Crash Course"
+
+### Comando Básicos
+
+- Para sair do Vim, `:q`.
+- Para entrar no modo de Inserção, `i`.
+- Para voltar ao modo Normal, `<ESC>`.
+- Para salvar as alterações, `:w`.
+- Podemos também combinar os comandos: por exemplo, `:wq` para salvar e sair.
+- Para sair sem salvar, `:q!`.
+- Para navegar, podemos utilizar as setas do teclado ou, alternativamente, `h j k l` (respectivamente, esquerda, baixo, cima, direita).
+- Apertar `i` inclui texto antes do cursor. Para adicionar depois do cursor, `a`. Além disso, as versões maiúsculas dessas letras permitem navegar para o começo ou o fim da linha, respectivamente.
+    - `i` - insert before character
+    - `I` - insert before line
+    - `a` - append after character
+    - `A` - append after line
+- `o` - new line below
+- `O` - new line above
+
+### Jump Word By Word
+
+- `w` - jump to next word
+- `b` - jump to previous word
+- `W` - jump to next WORD
+- `B` - jump to previous WORD
+\* **Observação**: `W` pula para a próxima palavra separada por espaço, enquanto `w` também considera caracteres especiais (por exemplo `.`).
+- `r` - replace letter
+- `R` - enter Replace Mode - every character typed overrides what's already written
+- `cw` - change word - utilizado, por exemplo, quando queremos replace uma palavra específica
+    - Actually, `c` is the replacing key, but alone it does nothing. You need to also specify how much you want to replace (for instance, I could want to replace the whole line, or just 2 words, or 1 word, etc). To do this, you need to follow up with another command: for example, `w` jumps to the start of the next word, so `cw` changes everything from the cursor to the first letter of the next word.
+
+You can also combine this commandos with numbers. For examplo, `8w` jumps 8 words forward, `c7w` changes 7 words and `4j` moves the cursor 4 lines down.
+
+- `C` - deletes the rest of the line (including the selected character itself).
+
+To delete without entering Insert Mode, use the command `d`:
+
+- `dw` - delete word
+- `D` - delete rest of line
+- `d4w`- delete 4 words
+
+Também é possível utilizar os comandos `d` e `c` para modificar linhas inteiras:
+
+- `dd` - delete whole line
+- `cc` - change whole line
+
+Esses comandos também podem ser combinados com números:
+
+- `4dd` - delete four lines
+- `8cc` - change 8 lines
+
+### Undo
+
+- `u` - undo
+- `CTRL + r` - redo
+
+Esses comandos também podem ser combiandos com números:
+
+- `5u` - undo last 5 changes
+- `7 CTRL + r` - redo 7 last things
+
+### Advanced Editing
+
+Vimos que é possível alterar uma palavra com o comando `cw`, porém para que ele funcione como desejado é necessário navegar para o começo da palavra (por exemplo, com `bcw`). Os comandos abaixo permitem modificar / deletar a palavra de qualquer lugar (ou seja, não é mais necessário estar no início dela):
+
+- `ciw` - change inner word
+- `diw` - delete inner word
+
+Os comandos acima não funcionam apenas com palavras, mas também com colchetes, aspas, parêntese etc.:
+
+- `ci(` ou `ci)` - change inner parentheses
+- `ci[` ou `ci]` - change inner brackets
+- `ci{` ou `ci}` - change inner curly brackets
+
+- `%` - jump to bracket - quando dentro de um par de parênteses / colchetes / aspas etc, a tecla `%` permite saltar para o parêntese / colchete / aspa correspondente (abertura ou fechamento).
+    - Isso para ser usado para seleção. Por exemplo, `c%` - change until bracket
+
+- `J` - remove line break at end of current line
+
+Comandos de navegação avançada:
+
+- `gg` - go to beggining of file
+- `G` - fo to end of file
+- `17G` - go to line 17
+- `:19` - go to line 19
+- `$` - end of line (without entering Insert Mode)
+    - Com isso, podemos usar, por exemplo, `d$` - delete until the end of line
+- `0` - beggining of line (without entering Insert Mode)
+
+### Paste and Copy
+
+- `v` - enter Visual Mode
+
+Estando no Modo Visual, podemos selecionar coisas e, com isso, executar a ação desejada com o texto selecionado:
+
+- `d` - delete
+- `c` - change
+- `y` - "yank" (copy)
+
+Após copiarmos algo com `y`, podemos colar o texto com as seguintes teclas (no Modo Normal):
+
+- `p` - paste after
+- `P` - paste before
+
+Por meio dos comandos `yy` ou `Y`, é possível "yank" the whole line. Com isso, para copiar uma linha para baixo, por exemplo, utilizamos `yyp`.
+
+Além disso, podemos, assim como os comandos anteriores, utilizar números:
+
+- `5yy` - yank 5 lines
+- `9p` - paste 9 times
+- `y5w` - yank 5 words
+
+Também é possível combinar a tecla `y` com os comandos `inner something` vistos anteriormente:
+
+- `yi)` - yank inner brackets
+- `yiw` - yank inner word
+
+Além do Modo Visual comum, temos também:
+
+- `SHIFT + v` - Visual Line - selecting whole lines (possibly multiple lines ate once) instead of just regions.
+    - Por exemplo, `V 50j d` permite apagar 50 linhas para baixo.
+- `CTRL + v` - Visual Block - columnwise selection, o que nos permite, por exemplo, editar várias linhas ao mesmo tempo.
+
+Comandos úteis:
+
+- `.` - repeat last operation
+- `zz` - center selected line (vertically on screen)
+
+Indentation and shifting:
+
+- `>` - shift right (in Visual Mode)
+- `<` - shift left (in Visual Mode)
+- `=` -  automatically indent (in Visual Mode)
+- `>> & <<` - shift line (in Normal Mode)
+- `==` - automatically indent line (in Normal Mode)
+- `gg=G` - indent whole file
+- `ggdG` - delete whole file
+
+### Search and Replace
+
+- `/word` - search for word
+- `n` - next occurrence
+- `N` - previous occurrence
+- `#` - previous token occurrence
+- `+` - next token occurrence
+- `:s/old/new/g` - replace every occurrence of `old` by `new` in one line
+- `:%s/old/new/g` - replace every occurrence of `old` by `new` in the whole file
+
+### `:` commands
+
+- `:set number` - show line numbers
+- `:set relativenumber` - show relative line numbers
+- `:colorscheme scheme` - select theme
+- `:set tabstop=4` - set tab width to four
+- `:set autoindent` - auto indentation
+- `:set mouse=a` - activate mouse
+- `:set mouse=""` - deactivate mouse
+
 ---
 
 ## Referências
 
 [Versão online das páginas de ajuda do Vim](https://vimhelp.org/)
+
+["Vim" - NeuralNine](https://www.youtube.com/playlist?list=PL7yh-TELLS1Eevqs4-XmlSfrFOKb5C97K)
+
+<https://www.youtube.com/watch?v=13gNtgqzzmM>
+
+<https://www.redhat.com/sysadmin/use-vim-macros>
+
+<https://youtu.be/RZ4p-saaQkc?si=GNfoKG5xEMChhl2N>
+
+<https://youtu.be/B-EPvfxcgl0?si=vl9mNczvdTNHx1hV>
