@@ -276,13 +276,55 @@ Indentation and shifting:
 - `:set mouse=a` - activate mouse
 - `:set mouse=""` - deactivate mouse
 
+## NeuralNine - "Vim Macros Are A Game Changer"
+
+Essencialmente, uma **macro** é uma sequência de *keybinds* que podemos repetir.
+
+Para gravar uma macro, pressionamos a combinação `q + letra` (por exemplo, `qa` inicia a gravação da macro `a`). A partir daí, quaisquer ações executadas são registradas e armazenadas no registrador `a`. Ao pressionar a tecla `q` novamente, a gravação se encerra.
+
+Após gravar a macro, utiliamos a combinação `@a` para repetí-la.
+
+\* Novas *keybinds*:
+
+- `CTRL + a` - incrementa o número sob o cursor (ou a próxima ocorrência de um número à direita do cursor).
+- `CTRL + x` - decrementa o número sob o cursor (ou o próximo número a partir do cursor).
+- No Modo Visual, podemos digitar `U` para transformar as letras selecionadas em maiúsculo e `u` para transformar em minúsculo.
+
+Assim como as *keybind* estudadas anteriormente, podemos utilizar números para indicar quantas vezes queremos repetir aquela macro. Por exemplo, `50@a` para executar a macro armazenada em `a` 50 vezes.
+
+- O comando `:reg` exibe o conteúdo armazenado em todos os registradores.
+
+## NeuralNine - "Marks in Vim Are A Game Changer"
+
+*Marks* são uma funcionalidade do Vim que permitem que você se movimente facilmente entre diferentes pontos de arquivos. A ideia básica é que podemos criar *waypoints* para determinadas posições (no mesmo arquivo ou através de de múltiplos arquivos) para pular facilmente para determinada posição.
+
+Para gravar uma *mark*, utilizamos, no Modo Normal, a tecla `m` seguida por uma letra, representando o registrador onde a posição ficará registrada. Por exemplo, `ma` marca a posição atual do cursor em `a`. A partir daí, podemos utilizar a combinação `'a` para voltar à **linha** da posição marcada e `` `a `` para voltar à **exata posição** marcada.
+
+Além de auxiliar na navegação, também é possível utilizar *marks* junto com outros comandos. Por exemplo, `d'a` deleta tudo da posição atual até a linha `a`.
+
+Para visualizar todas as *marks* que já temos registradas, podemos utilizar o comando `:marks`. É possível também visualizar o conteúdo de *marks* específicas (por exemplo, `:marks abc` exibe apenas as *marks* `a`, `b` e `c`).
+
+Para deletar uma *mark*, utilizamos o comando `:delmarks`. Por exemplo:
+
+- `:delmarks a` deleta o conteúdo da *mark* `a`;
+- `:delmarks a-c` deleta o conteúdo das *marks* `a`, `b` e `c`;
+- `:delmarks!` deleta todas as "*marks* minúsculas".
+
+Além das letras minúsculas, podemos utilizar letras maiúsculas para registrar *marks* globais, ou seja, acessíveis  e compartilhadas entre quaisquer arquivos (versus *marks* minúsculas, que são "locais", ou seja, relacionadas apenas a um determinado arquivo).
+
 ---
 
 ## Referências
 
 [Versão online das páginas de ajuda do Vim](https://vimhelp.org/)
 
-["Vim" - NeuralNine](https://www.youtube.com/playlist?list=PL7yh-TELLS1Eevqs4-XmlSfrFOKb5C97K)
+["Vim Crash Course For Beginners" - NeuralNine](https://youtu.be/jXud3JybsG4?si=4G5rSXr6imv0P6Jq)
+
+["Vim Macros Are A Game Changer" - NeuralNine](https://youtu.be/EICI9aNXXKg?si=n_4fKkbULoBvub3M)
+
+["Marks in Vim Are A Game Changer" - NeuralNine](https://youtu.be/XT_kFia3Ua4?si=UUM9glEHoO5TviLp)
+
+["Why Everyone Should Start Using Vim" - NeuralNine](https://youtu.be/XfJBvgnCeBk?si=4Iz7LDz2LYbi8Dav)
 
 <https://www.youtube.com/watch?v=13gNtgqzzmM>
 
@@ -291,3 +333,5 @@ Indentation and shifting:
 <https://youtu.be/RZ4p-saaQkc?si=GNfoKG5xEMChhl2N>
 
 <https://youtu.be/B-EPvfxcgl0?si=vl9mNczvdTNHx1hV>
+
+<https://youtu.be/I5QGlfbuCfs?si=yRBB49pQoWvHXrSj>
