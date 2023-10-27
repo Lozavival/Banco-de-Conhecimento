@@ -312,6 +312,59 @@ Para deletar uma *mark*, utilizamos o comando `:delmarks`. Por exemplo:
 
 Além das letras minúsculas, podemos utilizar letras maiúsculas para registrar *marks* globais, ou seja, acessíveis  e compartilhadas entre quaisquer arquivos (versus *marks* minúsculas, que são "locais", ou seja, relacionadas apenas a um determinado arquivo).
 
+## DistroTube - "Vim Tips And Tricks Some Of My Favorite Vim Commands"
+
+- Quando estamos no Modo Inserção, podemos deletar uma palavra inteira posicionando o cursor após o último caractere e utilizando a combinação `CTRL + w`.
+- No Modo Inserção, `CTRL + h` deleta um único caractere (ou seja, o mesmo efeito de um `Backspace`).
+- No Modo Inserção, `CTRL + u` deleta tudo do cursor até o começo da linha.
+- Podemos utilizar comandos do Modo Normal enquanto estamos o Modo Inserção por meio da combinação `CTRL + o` (por exemplo, `CTRL + o di"`).
+
+Os comandos acima são muito úteis pois removem a necessidade de apertar a tecla `Esc` e alternar entre o Modo Inserção e o Modo Normal o tempo todo apenas para realizar pequenos movimentos ou alterações, por exemplo.
+
+- No Modo Normal, a tecla `S` posiciona o cursor na indentação adequada para o bloco e altera para Modo de Inserção.
+
+No Modo Normal:
+
+- É possível dizer ao Vim onde o cursor deve ser posicionado na tela (verticalmente) por meio dos comandos `L`, `M`, `H` (*low*, *medium* e *high*).
+- `CTRL + u` move o cursor "meia página" para cima e `CTRL + d` move o cursor "meia página" para baixo.
+
+<!-- -->
+
+- O comando `:set spell` ativa a verificação ortográfica no Vim.
+- Qualquer comando, quando ativo com `:set`, pode ser desativado com `:set no` ou adicionando `&` ou `!` ao final da opção (por exemplo, no caso acima, `:set nospell`, `:set spell&` ou `:set spell!`).
+
+<!-- -->
+
+- É possível abrir a janela de ajuda por meio do comando `:help` (por exemplo, `:help d`), ou sua versão curta, `:h` (por exemplo, `:h number`).
+- Para fechar a janela de ajuda, utilizamos a combinação `CTRL + w c`.
+- Para obter ajuda sobre o que uma combinação de tecla faz em um modo específico, utilizamos `:h v_d`, por exemplo, para saber o que a tecla `d` faz no Modo Visual.
+
+## DistroTube - "Vim Can Save You Hours Of Work"
+
+- Para trocar a ordem de duas linhas: `ddp`.
+
+<!-- -->
+
+- Utilizando a busca, é possível mover uma linha que contém determinada string para o local desejado no arquivo. Por exemplo, o comando `:/Ultimately/m$` move a primeira linha (abaixo da atual) que contém a string 'Ultimately' para o final do arquivo.
+- Além disso, podemos utilizar movimentações mais complexas. Por exemplo, o comando `:/Ultimately/+1m-2` seleciona a linha **abaixo** da linha que contém "Ultimately" (*+1*) e a move (*m*) duas linhas para cima (*-2*). ***Observação:*** essa movimentação de "duas linhas para cima" desconsidera linhas vazias.
+
+<!-- -->
+
+- No Modo Normal, para voltar para a linha onde cursor o cursor antes de uma movimentação: `g;` (por exemplo, `gg g;` move o cursor para o início do arquivo e de volta para a linha "atual").
+- No Modo de Comando, podemos indentar múltiplas linhas com o comando `:início,fim>` (por exemplo, `:10,43>` move as linhas 10 a 43, inclusive, um nível de indentação para a direita). Esse comando tem o mesmo efeito de entrar no Modo Visual de Bloco, selecionar as linhas 10 a 43 e pressionar a tecla `>` - `CTRL+V 33j >`.
+
+<!-- -->
+
+- `cgn`: ao pesquisar por um termo, altera a próxima ocorrência daquele termo. Apresenta o mesmo comportamento de `n cw`.
+
+### Abbreviations
+
+`:ab abreviação abreviado`
+
+Por exemplo, ao criarmos a abreviação `:ab fsf Free Software Foundation`, podemos apenas digitar "fsf" (no Modo Inserção) e o Vim substituirá por "Free Software Foundation". Para inibir esse comportamento, basta digitar `CTRL+v` após a sequência abreviada (por exemplo, `fsf CTRL+v`).
+
+- Às vezes, queremos escrever em um arquivo, porém não temos permissão para isso. Para resolver, basta utilizar o comando `:w !sudo tee %` ("escreva o arquivo e execute o comando 'sudo' redirecionando a saída para o arquivo atual").
+
 ---
 
 ## Referências
@@ -326,7 +379,17 @@ Além das letras minúsculas, podemos utilizar letras maiúsculas para registrar
 
 ["Why Everyone Should Start Using Vim" - NeuralNine](https://youtu.be/XfJBvgnCeBk?si=4Iz7LDz2LYbi8Dav)
 
-<https://www.youtube.com/watch?v=13gNtgqzzmM>
+["Vim Tips And Tricks Some Of My Favorite Vim Commands" - DistroTube](https://www.youtube.com/watch?v=13gNtgqzzmM)
+
+["Vim Can Save You Hours Of Work" - DistroTube](https://www.youtube.com/watch?v=bshMXXX40_4)
+
+<https://www.youtube.com/playlist?list=PL5--8gKSku15tivUyt0D-mERePLEzrWUz>
+
+<https://www.youtube.com/watch?v=IiwGbcd8S7I>
+
+<https://www.youtube.com/watch?v=FrMRyXtiJkc>
+
+<https://www.youtube.com/watch?v=ZEIpdC_klDI>
 
 <https://www.redhat.com/sysadmin/use-vim-macros>
 
