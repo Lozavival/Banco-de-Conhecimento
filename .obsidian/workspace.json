@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "211dbb8fe0e15b38",
+        "id": "3e3d10a5515187bb",
         "type": "tabs",
         "children": [
           {
-            "id": "918e86081a5eb66b",
+            "id": "61b5642c83bc4163",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,8 +19,22 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "8cf208ff03fea5c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linguagens de Programação/Python/Django.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tecnologias/Vim.md"
+                "file": "Linguagens de Programação/Python/Django.md"
               }
             }
           },
@@ -97,7 +111,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Tecnologias/Vim.md"
+                "file": "Linguagens de Programação/Python/Django.md"
               }
             }
           },
@@ -107,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tecnologias/Vim.md",
+                "file": "Linguagens de Programação/Python/Django.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tecnologias/Vim.md",
+                "file": "Linguagens de Programação/Python/Django.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +173,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -174,19 +189,25 @@
       "command-palette:Abrir paleta de comandos": true
     }
   },
-  "active": "918e86081a5eb66b",
+  "active": "8cf208ff03fea5c5",
   "lastOpenFiles": [
-    "Sem título.md",
+    "Sem título 1.md",
+    "Linguagens de Programação/Python/Django.md",
     "Tecnologias/Vim.md",
+    "Algoritmo de Minimax.md",
     "Escrita/Markdown.md",
+    "Sem título.md",
     "Escrita/LaTeX.md",
+    "4913",
+    "vim-mode.css",
     "Tecnologias/Tecnologias.md",
+    "Tecnologias/Cloud Computing.md",
+    "Tecnologias/Pasted image 20231013195019.png",
     "Escrita/Escrita.md",
     "Linguagens de Programação/Linguagens de Programação.md",
     "Linguagens de Programação/R.md",
     "Planejamento.md",
     "Banco de Conhecimento.md",
-    "Tecnologias/Cloud Computing.md",
     "CM3033.md",
     "templates/índice.md",
     "Unicamp/Unicamp.md",
@@ -199,9 +220,6 @@
     "Unicamp/MC202 - Estruturas de Dados.md",
     "Unicamp/MC102 - Algoritmos e Programação de Computadores.md",
     "Linguagens de Programação/Python/NumPy.md",
-    "Linguagens de Programação/Python/SciPy.md",
-    "Linguagens de Programação/Python/Orientação a Objetos.md",
-    "Linguagens de Programação/Python/Django.md",
     "Unicamp/images/ms211-05-script.png",
     "Unicamp/images/mc536-01-sistema_taxi.png",
     "Unicamp/images/ms211-03-fibonnaci.png",
@@ -213,7 +231,6 @@
     "untitled2.png",
     "Captura de tela 2023-08-16 151706.png",
     "untitled.png",
-    "Captura de tela 2023-08-16 120917.png",
     "Linguagens de Programação/JavaScript"
   ]
 }

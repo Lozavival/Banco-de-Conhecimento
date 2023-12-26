@@ -240,21 +240,21 @@ Para indicar um espaço de código, envolva-o com caracteres de crase (`` ` ``):
 
 É possível utilizar também caracteres de crase triplos ( ` ``` `) para criar blocos de código dentro do documento. Utilizando essa estrutura, podemos especificar, logo após os três caracteres de crase que iniciam o bloco, a linguagem em que o código foi escrito e, dessa forma, produzir destaque de sintaxe no código contido no bloco.
 
-<pre>
+```markdown
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
-```
+```​
 
 ```python
 s = "Python syntax highlighting"
 print(s)
-```
+```​
 
-```
+```​
 Como nenhuma linguagem foi especificada, não há destaque de sintaxe.
+```​
 ```
-</pre>
 
 Alternativamente, podemos utilizar indentação como formar de gerar blocos formatados como código (sem destaque de sintaxe). Para isso, basta indentar cada linha do bloco com ao menos 4 espaços ou 1 tab; para adicionar níveis de indentação dentro do código, basta adicionar mais 4 espaços (ou 1 tab) para cada nível:
 
@@ -307,6 +307,14 @@ I get 10 times more traffic from [Google][] than from
 ```
 
 Esse estilo de link permite que todos os links sejam agrupados, por exemplo, ao final do documento, simulando notas de rodapé. Além disso, ele também torna o documento fonte muito mais legível, pois os parágrafos ficam mais próximos ao resultado final (sem os URLs no meio do texto) e podem ser escritos sem interrupção do fluxo de ideias (os URLs são apenas adicionados posteriormente, logo abaixo do parágrafo ou mesmo em uma seção separada).
+
+#### Notas de Rodapé (Obsidian Only)
+
+This is a footnote[^1]
+
+[^1]: definition of a footnote
+
+this is another footnote^[definition of another footnote]
 
 ### Imagens
 
@@ -397,3 +405,7 @@ ___________
 [Livro "Curso-R", seção 9.1.4 ("Equações")](https://livro.curso-r.com/9-1-markdown.html#equa%C3%A7%C3%B5es)
 
 ["Fundamentos de Markdown - Criando documentos e sites no Github" - André Santanchè](https://www.youtube.com/watch?v=fDyGs18_ITQ)
+
+["Every USEFUL Markdown Syntax That I Use in Obsidian" - FromSergio](https://www.youtube.com/watch?v=d8fXEhWy_rY)
+
+<https://www.youtube.com/watch?v=_PPWWRV6gbA>
