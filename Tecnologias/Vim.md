@@ -365,6 +365,37 @@ Por exemplo, ao criarmos a abreviação `:ab fsf Free Software Foundation`, pode
 
 - Às vezes, queremos escrever em um arquivo, porém não temos permissão para isso. Para resolver, basta utilizar o comando `:w !sudo tee %` ("escreva o arquivo e execute o comando 'sudo' redirecionando a saída para o arquivo atual").
 
+## Luke Smith - "Vim Tips You Probably Never Heard of"
+
+Atalhos com a tecla `g`.
+
+[7:02] gf : Open highlighted text as file.
+[8:02] gv : Reselecting previous selected text.
+[8:37] gJ : Conjoining lines without leaving spaces.
+[10:03] g& : Rerun substitute command for all lines.
+
+### Movimentação em linhas
+
+- `gj` e `gk` move o cursor para cima/baixo considerando as linhas visuais em vez das linhas "de fato"
+- `g0` e `g$` move o cursor para o início/fim da linha visual atual, em vez do início/fim do parágrafo
+- `gq` transforma a linha longa atual em múltiplas linhas. Por exemplo, `gqq` transforma a linha **atual** em múltiplas linhas e `gq5j` transforma as próximas 5 linhas em múltiplas linhas.
+
+### Capitalização
+
+- `gu` transforma todas as letras em minúsculas. Por exemplo, `gu$` transforma todas as letras do ponto atual até o fim da linha em minúsculas, `guu`.
+- `gU` transforma todas as letras em maiúsculas. Por exemplo, `gUU` transforma todas as letra em uma linha em maiúsculas, `gU3W`.
+- `~` altera a capitalização de uma letra.
+- `g~` altera a capitalização de um objeto de texto. Por exemplo, `g~~` para a linha inteira, `g~W` até a próxima palavra etc.
+
+### Outros
+
+- `gf` when cursor above a file name opens the file. Press `^` to return to the previous file.
+- `gv` reselects previous selected text.
+- `J` joins lines into one line. `gJ` joins the line without leaving spaces.
+- `g&` rerun substitute command for all lines.
+
+\* Para deletar a linha atual e a linha de cima, `dk`. Analogamente, `dj` tem o mesmo efeito de `2dd`.
+
 ---
 
 ## Referências
@@ -383,6 +414,8 @@ Por exemplo, ao criarmos a abreviação `:ab fsf Free Software Foundation`, pode
 
 ["Vim Can Save You Hours Of Work" - DistroTube](https://www.youtube.com/watch?v=bshMXXX40_4)
 
+["Vim Tips You Probably Never Heard of" - Luke Smith](https://www.youtube.com/watch?v=bQfFvExpZDU)
+
 <https://www.youtube.com/playlist?list=PL5--8gKSku15tivUyt0D-mERePLEzrWUz>
 
 <https://www.youtube.com/watch?v=IiwGbcd8S7I>
@@ -398,3 +431,5 @@ Por exemplo, ao criarmos a abreviação `:ab fsf Free Software Foundation`, pode
 <https://youtu.be/B-EPvfxcgl0?si=vl9mNczvdTNHx1hV>
 
 <https://youtu.be/I5QGlfbuCfs?si=yRBB49pQoWvHXrSj>
+
+<https://www.youtube.com/watch?v=B-EPvfxcgl0>
