@@ -174,7 +174,7 @@ Em Octave, podemos criar gráficos por meio da função `fplot`, utilizando a si
 octave:21> fplot("cos(x)", [0, 2*pi])
 ```
 
-![Gráfico da função cos(x), avaliada entre 0 e 2\*pi.](images/ms211-01-cosx.png)
+![Gráfico da função cos(x), avaliada entre 0 e 2\*pi.](ms211-01-cosx.png)
 
 #### Funções Anônimas
 
@@ -189,7 +189,7 @@ fun =
 octave:23> fplot(fun, [0 2*pi])
 ```
 
-![Gráfico da função fun](images/ms211-02-cos2x.png)
+![Gráfico da função fun](ms211-02-cos2x.png)
 
 #### Estruturas de Repetição
 
@@ -224,7 +224,7 @@ Para visualizar os dados armazenados em `f`, podemos utilizar a função `plot`,
 octave:30> plot(f, 'x')
 ```
 
-![Plot mostrando os valores armazenados em f](images/ms211-03-fibonnaci.png)
+![Plot mostrando os valores armazenados em f](ms211-03-fibonnaci.png)
 
 #### Customização de Gráficos
 
@@ -243,7 +243,7 @@ octave:35> ylabel("Intensidade")
 octave:36> legend("off")
 ```
 
-![Gráfico da função f](images/ms211-04-customizado.png)
+![Gráfico da função f](ms211-04-customizado.png)
 
 ### Scripts e Funções
 
@@ -264,7 +264,7 @@ octave:37> f = @(x) cos(x.^2);
 octave:38> grafico
 ```
 
-![Gráfico da função cos(x^2)](images/ms211-05-script.png)
+![Gráfico da função cos(x^2)](ms211-05-script.png)
 
 Chamamos esse tipo de arquivo, que guarda uma sequência de comandos a ser executada, de um *script*.
 
