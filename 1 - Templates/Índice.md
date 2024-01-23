@@ -1,5 +1,5 @@
-# Índice de <% tp.file.title %>
+# MOC de <% tp.file.title %>
 
-Arquivo de índice da pasta "<% tp.file.title %>".
+Índice das notas relacionada a "<% tp.file.title %>".
 
-Nesta pasta, estão armazenadas minhas notas permanentes sobre <% tp.file.cursor() %>
+Neste índice, estão presentes minhas notas permanentes sobre <% tp.file.cursor() %>
