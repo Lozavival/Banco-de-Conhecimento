@@ -2,5 +2,6 @@
   "obsidian-plugin-toc",
   "table-editor-obsidian",
   "templater-obsidian",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "obsidian-admonition"
 ]
