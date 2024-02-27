@@ -61,5 +61,14 @@
       ],
       "key": "PageDown"
     }
+  ],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "["
+    }
   ]
 }
