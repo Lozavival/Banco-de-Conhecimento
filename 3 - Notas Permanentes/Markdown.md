@@ -1,6 +1,9 @@
 # Markdown
 
-**Palavras-chave:** #escrita, #marcação
+**Palavras-chave:** #escrita #marcação  
+**Última modificação:** <%+ tp.file.last_modified_date("DD/MM/YYYY HH:mm") %>  
+**Notas de estudo relacionadas:**  
+\-----
 
 *Markdown* é uma linguagem de marcação e formatação de texto voltada para a escrita de documentos. Os formatos são introduzidos no texto na forma de símbolos simples, intuitivos e semelhantes ao resultado final. Os documentos são escritos e armazenados em texto pleno e convertidos para HTML para visualização.
 
@@ -8,21 +11,22 @@
 
 ## Tabela de Conteúdos
 
-1. [Folha de Consulta](#folha-de-consulta)
-    1. [Titulações](#titulações)
-    1. [Parágrafos e Quebras de Linha](#parágrafos-e-quebras-de-linha)
-    1. [Ênfase de Texto](#ênfase-de-texto)
-    1. [Citações em Bloco](#citações-em-bloco)
-    1. [Listas](#listas)
-        1. [Lista de Tarefas](#lista-de-tarefas)
-        1. [Lista de Definições](#lista-de-definições)
-    1. [Equações](#equações)
-    1. [Blocos de Código](#blocos-de-código)
-    1. [Links](#links)
-    1. [Imagens](#imagens)
-    1. [Tabelas](#tabelas)
-    1. [Linhas Horizontais](#linhas-horizontais)
-1. [Referências](#referências)
+- [Folha de Consulta](#folha-de-consulta)
+    - [Titulações](#titula%C3%A7%C3%B5es)
+    - [Parágrafos e Quebras de Linha](#par%C3%A1grafos-e-quebras-de-linha)
+    - [Ênfase de Texto](#%C3%AAnfase-de-texto)
+    - [Citações em Bloco](#cita%C3%A7%C3%B5es-em-bloco)
+    - [Listas](#listas)
+        - [Lista de Tarefas](#lista-de-tarefas)
+        - [Lista de Definições](#lista-de-defini%C3%A7%C3%B5es)
+    - [Equações](#equa%C3%A7%C3%B5es)
+    - [Blocos de Código](#blocos-de-c%C3%B3digo)
+    - [Links](#links)
+    - [Imagens](#imagens)
+    - [Notas de Rodapé (Obsidian only)](#notas-de-rodap%C3%A9-obsidian-only)
+    - [Tabelas](#tabelas)
+    - [Linhas Horizontais](#linhas-horizontais)
+- [Referências](#refer%C3%AAncias)
 
 ---
 
@@ -30,7 +34,7 @@
 
 ### Titulações
 
-Titulação em Markdown é feita adicionando-se 1 a 6 caracteres de hash no início da linha, correspondentes aos níveis de titulação 1 a 6.
+Titulação em Markdown é feita adicionando-se 1 a 6 caracteres de cerquilha (`#`) no início da linha, correspondentes aos níveis de titulação 1 a 6.
 
 - Deve-se sempre adicionar um espaço em branco entre a cerquilha e o título.
 - É uma boa prática adicionar ao menos uma linha vazia antes e depois do título.
@@ -80,7 +84,7 @@ Negrito: **asteriscos** ou __underlines__
 Ênfase combinada com **asteriscos e _underlines_**
 ```
 
-Ao utilizar ênfase no meio de uma palavra, utilize sempre asteriscos, nunca underline:
+Ao utilizar ênfase no meio de uma palavra, utilize sempre asteriscos, nunca *underline*:
 
 ```markdown
 Love**is**bold
@@ -91,7 +95,7 @@ Alguns processadores de Markdown permitem a utilização de destaque de texto:
 ```markdown
 Texto riscado: ~~til duplo~~
 
-Destaque ==palavras-chave==
+Destaque: ==palavras-chave==
 ```
 
 ### Citações em Bloco
@@ -131,7 +135,7 @@ Listas ordenadas utilizam números seguidos por pontos:
 3. Terceiro item
 ```
 
-Os itens em listas ordenadas são numerados automaticamente na conversão do Markdown; sendo assim, não é necessário que os números correspondam ao output desejado. Dessa forma, os dois exemplos produzirão o mesmo resultado:
+Os itens em listas ordenadas são numerados automaticamente na conversão do Markdown; sendo assim, não é necessário que os números digitados correspondam à numeração desejada. Dessa forma, os dois exemplos produzirão o mesmo resultado:
 
 ```markdown
 1. Primeiro item
@@ -159,7 +163,7 @@ Em listas não ordenadas, utilize asteriscos (`*`), sinais de mais (`+`) ou hife
 + Terceiro item
 ```
 
-Marcadores de lista devem ser seguidos por um ou mais espaços ou um tab. Uma boa prática é alinhar itens com mais de uma linha (ou mesmo mais de um parágrafo) com recuos, embora isso não seja necessários:
+Marcadores de lista devem ser seguidos por um ou mais espaços ou um caractere de tabulação. Uma boa prática é alinhar itens com mais de uma linha (ou mesmo mais de um parágrafo) com recuos, embora isso não seja necessários:
 
 ```markdown
 *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -203,7 +207,7 @@ Para criar uma lista de tarefas, comece a linha com colchetes separados por um e
 
 #### Lista de Definições
 
-Alguns processadores de Markdown permitem a criação de uma lista de definições de termos. Para criar uma lista de definições, digite o termo na primeira linha e, na linha seguinte, digite um símbolo de dois pontos (`:`) seguido por um espaço e a definição do termo.
+**Alguns processadores** de Markdown permitem a criação de uma lista de definições de termos. Para criar uma lista de definições, digite o termo na primeira linha e, na linha seguinte, digite um símbolo de dois pontos (`:`) seguido por um espaço e a definição do termo.
 
 ```markdown
 Primeiro Termo
@@ -216,7 +220,7 @@ Segundo Termo
 
 ### Equações
 
-É possível adicionar equações em arquivos markdown utilizando [equações do LaTeX](LaTeX#Equações).
+É possível adicionar equações em arquivos markdown utilizando [equações do Latex](../7%20-%20Em%20Progresso/Escrita/LaTeX.md#Equações).
 
 Para centralizar uma equação em uma linha própria, basta envolver o código com duplo cifrão (`$$`):
 
@@ -277,7 +281,7 @@ Markdown suporta dois estilos de links: *inline* e por *referência*. Em ambos e
 
 - Caso seja necessário utilizar espaços dentro do link (por exemplo, no nome de um arquivo), deve-se substituir os espaços em branco por sua codificação `%20`.
 
-Para criar um link inline, adicione, logo após os colchetes como texto do link, um conjunto de parênteses contento o URL ou caminho relativo para onde o link apontará, além de um título opcional para o link.
+Para criar um link inline, adicione, logo após os colchetes como texto do link, um conjunto de parênteses contendo o URL ou caminho relativo para onde o link apontará, além de um título opcional para o link.
 
 ```markdown
 Link inline para URL com título: [texto-do-link](https://exemplo.com/ "Título")
@@ -308,14 +312,6 @@ I get 10 times more traffic from [Google][] than from
 
 Esse estilo de link permite que todos os links sejam agrupados, por exemplo, ao final do documento, simulando notas de rodapé. Além disso, ele também torna o documento fonte muito mais legível, pois os parágrafos ficam mais próximos ao resultado final (sem os URLs no meio do texto) e podem ser escritos sem interrupção do fluxo de ideias (os URLs são apenas adicionados posteriormente, logo abaixo do parágrafo ou mesmo em uma seção separada).
 
-#### Notas de Rodapé (Obsidian Only)
-
-This is a footnote[^1]
-
-[^1]: definition of a footnote
-
-this is another footnote^[definition of another footnote]
-
 ### Imagens
 
 A sintaxe de imagem utilizada pelo Markdown é similar à sintaxe para links, apenas incluindo um ponto de exclamação ao início da linha:
@@ -335,6 +331,21 @@ Também é possível utilizar imagens como link. Para isso, basta inserir a imag
 ```
 
 Por fim, Markdown não possui sintaxe para especificar as dimensões de uma imagem; caso isso seja necessário, utilize a tag padrão `<img>` do HTML.
+
+### Notas de Rodapé (Obsidian only)
+
+O Obsidian permite a criação de notas de rodapé de duas formas:
+
+1. Em uma sintaxe similar aos links por referência, adicionar, entre colchetes, um acento circunflexo (`^`) seguido pelo rótulo daquela nota e, na linha seguinte, a definição relacionada à nota de rodapé ou
+2. Escrever o acento circunflexo antes de abrir os colchetes e, entre os colchetes, escrever diretamente a definição da nota.
+
+```markdown
+Isso é uma nota de rodapé[^1]
+
+[^1]: definição da nota de rodapé
+
+Isso é outra nota de rodapé^[definição da outra nota de rodapé]
+```
 
 ### Tabelas
 

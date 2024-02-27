@@ -4,7 +4,7 @@
   "showLineNumber": true,
   "spellcheck": false,
   "alwaysUpdateLinks": true,
-  "newFileLocation": "root",
+  "newFileLocation": "folder",
   "showInlineTitle": false,
   "strictLineBreaks": true,
   "showIndentGuide": true,
@@ -20,8 +20,11 @@
   "useTab": false,
   "tabSize": 4,
   "rightToLeft": false,
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "propertiesInDocument": "hidden",
   "vimMode": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "6 - Anexos",
+  "newFileFolderPath": "7 - Em Progresso",
+  "newLinkFormat": "relative"
 }

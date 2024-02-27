@@ -1,6 +1,9 @@
 # Ambientes Virtuais em Python
 
-**Palavras-chave:** #python, #python-impressionador
+**Palavras-chave:** #python #bibliotecas #framework  
+**Última modificação:** <%+ tp.file.last_modified_date('DD/MM/YYYY HH:mm') %>  
+**Notas de estudo relacionadas:**  
+\-----
 
 Um ambiente virtual empacota todas as dependências de um projeto e as armazena em um diretório, fazendo com que nenhum pacote seja instalado diretamente no sistema operacional. Sendo assim, cada projeto pode possuir seu próprio ambiente e, consequentemente, suas bibliotecas ou até mesmo o Python em versões específicas.
 
@@ -13,24 +16,24 @@ Isso possibilita que possamos, por exemplo:
 
 ## Tabela de Conteúdos
 
-1. [venv](#venv)
-    1. [Criação do Ambiente Virtual (venv)](#cria%C3%A7%C3%A3o-do-ambiente-virtual-venv)
-    1. [Ativação e Desativação do Ambiente Virtual (venv)](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual-venv)
-    1. [Replicando Ambientes Virtuais (venv)](#replicando-ambientes-virtuais-venv)
-    1. [Configuração de Variáveis de Ambiente (venv)](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente-venv)
-1. [Conda](#conda)
-    1. [Criação do Ambiente Virtual (Conda)](#cria%C3%A7%C3%A3o-do-ambiente-virtual-conda)
-        1. [Especificando a Localização do Ambiente (Conda)](#especificando-a-localiza%C3%A7%C3%A3o-do-ambiente-conda)
-    1. [Ativação e Desativação do Ambiente Virtual (Conda)](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual-conda)
-    1. [Replicando Ambientes Virtuais (Conda)](#replicando-ambientes-virtuais-conda)
-    1. [Configuração de Variáveis de Ambiente (Conda)](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente-conda)
-1. [Referências](#refer%C3%AAncias)
+- [venv](#venv)
+    - [Criação do Ambiente Virtual (venv)](#cria%C3%A7%C3%A3o-do-ambiente-virtual-venv)
+    - [Ativação e Desativação do Ambiente Virtual (venv)](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual-venv)
+    - [Replicando Ambientes Virtuais (venv)](#replicando-ambientes-virtuais-venv)
+    - [Configuração de Variáveis de Ambiente (venv)](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente-venv)
+- [Conda](#conda)
+    - [Criação do Ambiente Virtual (Conda)](#cria%C3%A7%C3%A3o-do-ambiente-virtual-conda)
+        - [Especificando a Localização do Ambiente (Conda)](#especificando-a-localiza%C3%A7%C3%A3o-do-ambiente-conda)
+    - [Ativação e Desativação do Ambiente Virtual (Conda)](#ativa%C3%A7%C3%A3o-e-desativa%C3%A7%C3%A3o-do-ambiente-virtual-conda)
+    - [Replicando Ambientes Virtuais (Conda)](#replicando-ambientes-virtuais-conda)
+    - [Configuração de Variáveis de Ambiente (Conda)](#configura%C3%A7%C3%A3o-de-vari%C3%A1veis-de-ambiente-conda)
+- [Referências](#refer%C3%AAncias)
 
 ---
 
 ## venv
 
-`venv` é um módulo nativo do Python com suporte para criação de ambientes virtuais leves,
+`venv` é um módulo nativo do Python com suporte para criação de ambientes virtuais leves.
 
 ### Criação do Ambiente Virtual (venv)
 
@@ -265,7 +268,7 @@ Assim que você tenha configurado uma variável de ambiente, é necessário reat
 
 ## Referências
 
-Aulas e [materiais](28.%20Ambientes%20Virtuais.ipynb) disponibilizados no curso [Python Impressionador](https://www.hashtagtreinamentos.com/curso-python)
+Aulas e [materiais](../6%20-%20Anexos/28.%20Ambientes%20Virtuais.ipynb) disponibilizados no curso [Python Impressionador](https://www.hashtagtreinamentos.com/curso-python)
 
 ["Criando ambientes virtuais para projetos Python com o Virtualenv" - TreinaWeb](https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv)
 
