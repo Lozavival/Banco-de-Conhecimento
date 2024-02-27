@@ -22,7 +22,7 @@ ou
 pip install numpy
 ```
 
-Ao utilizar o pip, é fortemente recomendada a instalação dentro de um [ambiente virtual](Ambientes%20Virtuais). Caso você ainda não tenha o Python ainda, a documentação recomenda a instalação via [Anaconda](https://www.anaconda.com/), pois, além do Python, ela já inclui pacotes utilizados para computação científica e ciência de dados, como NumPy, SciPy, Pandas e Matplotlib, entre outras.
+Ao utilizar o pip, é fortemente recomendada a instalação dentro de um [ambiente virtual](Ambientes%20Virtuais%20em%20Python.md). Caso você ainda não tenha o Python ainda, a documentação recomenda a instalação via [Anaconda](https://www.anaconda.com/), pois, além do Python, ela já inclui pacotes utilizados para computação científica e ciência de dados, como NumPy, SciPy, Pandas e Matplotlib, entre outras.
 
 ### Importação
 

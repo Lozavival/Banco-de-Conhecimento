@@ -9,7 +9,7 @@ Segundo a própria documentação, "Django é um framework web de Python de alto
 ## Pré-requisitos
 
 1. [Classes e Orientação a Objetos](Orientação%20a%20Objetos.md)
-2. [Ambientes Virtuais](Ambientes%20Virtuais.md)
+2. [Ambientes Virtuais em Python](Ambientes%20Virtuais%20em%20Python.md)
 
 ## Planejamento do Site
 
