@@ -93,6 +93,28 @@ Duas operações fundamentais:
 Múltiplas implementações de cada uma:
 
 - Processador único vs. vários processadores
-- Hardware especial vs. algoritmos especiais
+- Hardware especial vs. algoritmos especiais (software)
 - Técnicas diferentes nos sistemas operacionais
 - Ajustar o rendimento em alguns casos especiais
+
+## 09/04
+
+### Fundamentos da sincronização
+
+- Mutex define uma seção crítica que não pode ser executada **simultaneamente** em diferentes threads (precisa esperar sincronizar)
+- Monitores precisam ter suporte da linguagem de programação
+- Mutex é uma forma de definir sequências de operações atômicas (apenas quem tiver a variável mutex no momento pode executar, e depois libera o lock)
+
+### Sequência de instruções atômicas
+
+Domínio do problema:
+
+- É uma sequência **curta** de instruções (precisa saber identificar a seção crítica onde a condição de corrida pode acontecer)a
+- Ninguém mais pode entrelaçar a mesma sequência (ou uma sequência similar)
+- Tipicamente não existe competição
+
+`cwait` = "conditional wait" -> função especial para variável de condição, na qual esperamos algum evento específico acontecer (no caso, esperar que `date` e `hour` tenham os valores desejados)
+
+Interesse: ao dizer que "quero entrar", não dependo de esperar que mais alguém entre (já resolve um pouco o problema do progresso -> a não ser que entrelace)
+
+`turn = j` em vez de `turn = i`: começa "cedendo a vez" para a outra thread para evitar que entrelaçe como no caso anterior

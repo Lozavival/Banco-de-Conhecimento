@@ -54,5 +54,15 @@ f = zeta(d, e);
 
 ### Fibonacci
 
-- Precisamos do `taskwait` para garantir que `i`e `j` tiveram seus valores inicializados e não estamos somando lixo.
-- O código inicial não gera um grande speedup devido à **granularidade**: para n pequeno, só vai cair do `if`.
+- Precisamos do `taskwait` para garantir que `i` e `j` tiveram seus valores inicializados e não estamos somando lixo.
+- O código inicial não gera um grande speedup devido à **granularidade**: para n pequeno, só vai cair no `if`.
+
+## 08/04 - Aula XX: Programação Map-Reduce com Spark
+
+Tolerância a falhas: fazemos checkpoints dos dados temporários durante a execução e, caso ocorra falha em um dos nós, os cálculos que seriam realizados por esse nó são transferidos para outros nós.
+
+No slide 13, cada cor de quadradinho representa um dados diferente. Note que diferentes nós possuem dados da mesma cor. Com isso, se um nó falha, ainda temos os mesmos dados **replicados** em outros nós.
+
+\* hadoop = conjunto de softwares para big data
+
+Spark: processamento representado como DAG faz lembrar de tasks.
