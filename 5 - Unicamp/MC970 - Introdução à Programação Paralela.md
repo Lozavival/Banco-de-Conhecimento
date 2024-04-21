@@ -66,3 +66,11 @@ No slide 13, cada cor de quadradinho representa um dados diferente. Note que dif
 \* hadoop = conjunto de softwares para big data
 
 Spark: processamento representado como DAG faz lembrar de tasks.
+
+## 15/04
+
+NVLink: usado para comunicação direta entre GPUs
+
+Tensor Core: multiplicação de matrizes (IA)
+
+4 for yield: são garantia caso algum dos 68 falhe

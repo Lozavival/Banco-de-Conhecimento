@@ -118,3 +118,22 @@ Domínio do problema:
 Interesse: ao dizer que "quero entrar", não dependo de esperar que mais alguém entre (já resolve um pouco o problema do progresso -> a não ser que entrelace)
 
 `turn = j` em vez de `turn = i`: começa "cedendo a vez" para a outra thread para evitar que entrelaçe como no caso anterior
+
+## 11/04
+
+### Algoritmo da padaria
+
+**Contexto:** Se há mais de dois processos, utilizamos uma generalização baseada no mostrador da padaria: obtemos números de tickets que aumentam monotonicamente e esperamos enquanto o número de cliente seja o nosso.  
+\* *Versão multiprocesso:* ao contrário da realidade, dois processos podem obter o mesmo número de ticket; precisamos de alguma forma de quebrar empates.
+
+#### Algoritmo
+
+Por que utilizamos o número do ticket **e** o número do processo? Pode ser que dois processos simultaneamente rodem o `max` e selecionem o mesmo número de ticket. Assim, como critério de desempate, tomamos turno quando temos o ticket ___e___ o pid menor.
+
+### Mutex
+
+O mutex não se vale apenas de software; há também suporte em hardware para auxiliar (depende de como executa os programas).
+
+## 15/04
+
+No `xchg`, o barramento está bloqueado, ou seja, ninguém mais consegue acessar a memória
