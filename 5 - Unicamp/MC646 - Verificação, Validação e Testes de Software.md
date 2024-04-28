@@ -14,10 +14,8 @@ Disciplina cursada no 1º semestre de 2024 com a Prof.ª Eliane Martins.
 ## 21/03
 
 ```ad-important
-Nunca escolher valores errados para mais de uma variável em um único caso de teste!
+Nunca escolher valores inválidos para mais de uma variável em um único caso de teste!
 ```
-
-^57c183
 
 ## 02/04 - Aula 07: Testes Combinatórios
 
@@ -244,3 +242,33 @@ Ver slides 31-36 para um exemplo completo de geração de casos de teste combina
 3. Localização de combinações que causam falha
     - Qual força de combinação usar para revelar mais defeitos?
 ```
+
+## 04/04 - Aula 08: Testes Baseados em Expressões Lógicas
+
+### Motivação
+
+- Testes baseados no domínio de entrada:
+    - Aleatórios
+    - Particionamento em classes de equivalência
+    - Combinatórios
+    - São focados nas **entradas**
+
+O que fazer quando o **comportamento** da unidade funcional depende da combinação de **condições** sobre as entradas?
+
+```ad-example
+Se cond1 então tarefa A
+
+Se !cond1 e cond então tarefa B
+
+Se !cond2 e cond3 ou cond4 então tarefa C
+```
+
+```ad-note
+O comportamento da UF depende da **sequência** em que as tarefas são executadas.
+```
+
+Solução: testes baseados em modelos -> focam no **comportamento esperado** da UF.
+
+### Testes Baseados em Modelos (TBM)
+
+Nome dado a um conjunto de técnicas de testes baseados em **modelos de comportamento** do software.

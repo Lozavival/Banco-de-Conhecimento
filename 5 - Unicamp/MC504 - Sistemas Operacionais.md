@@ -9,15 +9,7 @@ Disciplina cursada no 1º semestre de 2024 com o Prof. Carlos Alberto Astudillo 
 
 ---
 
-## 05/03 - Aula 01: Introdução a Sistemas Operacionais
-
-## 02/04
-
-Se um processo do usuário tem múltiplas threads, o escalonador tratará como se cada thread fosse um processo diferente (do ponto de vista do kernel, não há diferença).
-
-## 04/04 - Aula 09: Sincrozinação (Parte 1)
-
-### Correção do Quiz
+## 04/04 - Correção do Quiz 1
 
 1. pipe = buffer de kernel entre dois descritores de arquivo
 2. comunicação em uma via = produtor-consumidor
@@ -38,6 +30,134 @@ Se um processo do usuário tem múltiplas threads, o escalonador tratará como s
 Justificativas:
 - _BSS_ refers to uninitialized global and static objects and _Data_ refers to initialized global and static objects. [\[1\]](https://cosmic-software.com/faq/faq17.php)
 - O endereço de `b` é o mesmo porque está executando em uma memória virtual.
+
+---
+
+## Introdução a Sistemas Operacionais
+
+## Stack
+
+Para esta aula, vamos nos concentrar em x86 com 32 bits (IA-32):
+
+- x86-64 não é simples para o código do kernel (as interrupções são mais complicadas);
+- x86-64 não é simples para depurar
+    - mais registradores = mais registradores que podem ter valores incorretos;
+- A memória virtual do x86-64 exige mais passos que no x86-32;
+- Ainda há muitas máquinas de 32 bits no mundo.
+
+### Espaço privado de memória
+
+- Cada processo tem seu próprio espaço **privado** de memória:
+- Os endereços de memória variam entre deiferentes arquiteturas
+- Detalhes podem variar entre diferentes sistemas operacionais e versões do kernel
+- brk: chamada do sistemas (Unix) para poder distribuir de maneira dinâmica a memória do segmento de dados (*program break of process*).
+
+![[../6 - Anexos/Pasted image 20240427155848.png]]
+
+### Segmentos de memória
+
+![[../6 - Anexos/Pasted image 20240427161535.png]]
+
+````ad-attention
+- **BSS:** refere-se a objetos **globais** ou **locais estáticos** não-inicializados.
+- **Data:** refere-se a objetos **globais** ou **locais estáticos** inicializados.
+
+Variáveis **locais não estáticas**, sejam elas inicializadas ou não, são armazenadas na ___stack___!
+
+```ad-cite
+Considerando que variáveis locais declaradas com `static` perduram mesmo após o fim da execução daquela chamada da função, faz sentido que ela seja armazenada na data/BSS. Por outro lado, variáveis locais que não são `static` têm sua vida ligada àquela chamada da função, apenas, logo faz sentido que elas estejam na stack.
+```
+````
+
+### Stack
+
+- As regiões de memória se administram como uma pilha que **cresce** para os endereços **menores**.
+- O registrador `%esp` indica o menor esdereço da stack, ou seja, o **endereço no topo da stack**.
+
+|                                                  Stack Push                                                   |                                 Stack Pop                                  |
+|:-------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|
+|                                                  `pushl src`                                                  |                                 `popl dst`                                 |
+| Diminui `%esp` por 4 (tamanho de um inteiro) e armazena o operando na memória no endereço apontado por `%esp`. | Lê o endereço de memória apontado por por `%esp` e incrementa `%esp`por 4. |
+|                              ![[../6 - Anexos/Pasted image 20240427164035.png]]                               |             ![[../6 - Anexos/Pasted image 20240427164145.png]]             |
+
+![[../6 - Anexos/Pasted image 20240427164256.png]]
+
+*Exemplo de operação no stack*
+
+### Controle de fluxo: Funções
+
+Usamos o stack para ajudar na chamada e retorno de funções:
+
+- Chamada a função: `call label`
+    - Faz *push* ao endereço de retorno
+    - Pula para o endereço de `label`
+- Retorno da função: `ret`
+    - *pop* ao endereço no stack
+    - Pula para o endereço obtido
+
+#### Stack frames
+
+- Em linguagens que suportam recursão, múltiplas instâncias da mesma função devem poder existir ao mesmo tempo.
+- Precisamos de algum lugar para armazenar o estado de cada instância:
+    - Argumentos
+    - Variáveis locais
+    - Ponteiros de retorno
+    - Links estáticos, tratamento de exceções etc.
+
+**Observação:** o estado da função é necessário apenas por **tempo limitado** (desde o momento da chamada até o retorno).
+
+```ad-info
+O stack se armazena em *frames aninhado*s, que armazenam o estado de cada instância do processo.
+
+Além do registrador `%esp`, que indica o topo do stack, temos também o `%ebp`, que indica **o início do frame atual**.
+```
+
+![[../6 - Anexos/Pasted image 20240427170554.png]]
+
+```ad-seealso
+Ver slides 22-31 para exemplo de chamada a uma função.
+```
+
+#### Convenção para armazenar em registradores
+
+**Registradores de quem chama:** a função que chama salva temporariamente os registradores em seu frame antes de chamar
+
+**Registradores do chamado:** a funnção chamada salva temporariamente os registradores antes de usar
+
+![[../6 - Anexos/Pasted image 20240427171752.png]]
+
+### Resumo do stack
+
+- O stack faz com que a recursão funcione
+    - Armazenamento privado para cada instância da função
+        - Instâncias distintas não interefrem entre elas
+        - Endereços locais e argumentos são relativos à posição do stack
+    - As isntâncias podem administrar-se como uma pilha
+        - AS funções retornam na ordem inversa das chamadas
+- Funções IA32: instruçõies e convenções
+    - `call` e `ret` misturam `%eip` e `%esp` de uma maneira estabelecida
+    - Convenção do uso de registradores
+        - Armazenamento do que chama e do chamado
+        - `%ebp` e `%esp`
+    - Convenção para organizar o stack frame
+
+![[../6 - Anexos/Pasted image 20240427172204.png]] ![[../6 - Anexos/Pasted image 20240427172213.png]]
+
+## Kernel
+
+## Processos
+
+## Threads
+
+Uma *thread* é uma linha ou fluxo de execução de código que executa em paralelo com outras threads do mesmo processo, **compartilhando seu espaço de endereçamento**. Na prática, uma *thread* é equivalente a um "mini-processo" dentro de um processo, o que permite que várias ações sejam executadas em paralelo por um mesmo processo.
+
+### Por que usar threads?
+
+
+
+Se um processo do usuário tem múltiplas threads, o escalonador tratará como se cada thread fosse um processo diferente (do ponto de vista do kernel, não há diferença).
+
+## Sincronização
 
 ###  Problemas com programas multi-threads
 
