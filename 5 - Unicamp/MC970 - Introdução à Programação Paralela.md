@@ -28,12 +28,12 @@ Metodologias de programação (usando, por exemplo, Pthreads e OpenMP). Técnica
 
 #### Avaliação (/10)
 
-- Qualidade da apresentação - 3
-- Qualidade dos slides - 3
-- Completude - 1
-- Tempo - 1 -> não precisa ser 10 minutos exatos, só não pode ser muito longo ou muito curto
-- Bibliografia - 1
-- Respostas às perguntas - 1
+- Qualidade da apresentação: 3,0
+- Qualidade dos slides: 3,0
+- Completude: 1,0
+- Tempo (10 minutos por pessoa): 1,0
+- Bibliografia: 1,0
+- Respostas às perguntas: 1,0
 
 ### Slide 37
 
