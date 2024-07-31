@@ -2,7 +2,7 @@
 
 **Data:** 18/05/2024  
 **Palavras-chave:** #ia #machinelearning #aprendizado  
-**Referência:** <>
+**Referência:** <https://github.com/caiopetruccirosa/curso-de-machine-learning/tree/main/aula01>
 
 ---
 
