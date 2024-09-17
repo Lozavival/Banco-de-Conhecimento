@@ -8,7 +8,7 @@
 
 ## O que é IA, ML e DL?
 
-![IA x ML x DL | 650](../6%20-%20Anexos/IAxMLxDL.png)
+![IA x ML x DL | 650](../6%20-%20Anexos/iris-ml-01-ia_x_ml_x_dl.png)
 *IA x ML x DL*. Fonte: <https://medium.com/mednerdtech/ia-x-ml-x-dl-e320867333c1>.
 
 ### O que é Inteligência Artificial?
@@ -41,7 +41,7 @@ De uma forma genérica, podemos dizer que inteligência artificial é um **siste
 
 ### IA antes Machine Learning
 
-![IA antes de ML| 750](../6%20-%20Anexos/ia_antes_ml.png)
+![IA antes de ML| 750](../6%20-%20Anexos/iris-ml-01-ia_antes_de_ml.png)
 *IA antes de Machine Learning*. Fonte: slides do curso.
 
 ```ad-info
@@ -58,7 +58,7 @@ Tom Michel (1997)
 
 - Em outras palavras, conforme ocorre o processo de experiência com os dados (i.e. ajuste dos parâmetros do modelo), o erro em relação a esses dados é metrificado e buscamos reduzí-lo o máximo possível.
 
-![Modelos que se ajustam aos dados| 750](../6%20-%20Anexos/modelos_ml.png)
+![Modelos que se ajustam aos dados| 750](../6%20-%20Anexos/iris-ml-01-o_que_e_ml.png)
 *Modelos que se ajustam aos dados*. Fonte: slides do curso.
 
 ### O que é Deep Learning?
@@ -71,7 +71,7 @@ Goodfellow et al. (2016)
 
 - Em resumo, o sistema aprende conceitos mais gerais ou mais específicos em um determinado contexto e combina esses conceitos para montar uma hierarquia.
 
-![Sistemas de aprendizado profundo | 750](../6%20-%20Anexos/sistemas_dl.png)
+![Sistemas de aprendizado profundo | 750](../6%20-%20Anexos/iris-ml-01-o_que_e_dl.png)
 *Sistemas de aprendizado profundo*. Fonte: slides do curso.
 
 Em *Machine Learning* "tradicional", o programador explicita o tipo de modelagem que quer fazer (e pode ser muito bom ou horrível, por exemplo, tentar modelar com uma regressão linear dados que não possuem relação linear). Agora, os modelos se tornam mais flexíveis (a própria rede aprende o melhor modelo).
@@ -84,7 +84,7 @@ Em *Machine Learning* "tradicional", o programador explicita o tipo de modelagem
 **Homogeneização:** uso de uma mesma técnica em várias áreas.
 ```
 
-![Linha do tempo de emergência e homogeneização](../6%20-%20Anexos/emergencia_homogeneizacao.png)
+![Linha do tempo de emergência e homogeneização](../6%20-%20Anexos/iris-ml-01-emergencia_e_homogeneizacao.png)
 *Linha do tempo de emergência e homogeneização*. Fonte: <https://arxiv.org/abs/2108.07258>.
 
 - **Em *Machine Learning***:
@@ -111,7 +111,7 @@ Todas as interações na internet geram dados. Com ML e DL, dados passam a se to
 
     O treinamento de modelos, em especial os grandes modelos de linguagem (*LLMs*), gera um enorme gasto financeiro e consumo energético, o que frequentemente se traduz em uma enorme pegada ecológica. Por exemplo, a figura abaixo compara a quantidade de gás carbônico emitido (em toneladas) durante o treinamento de modelos de aprendizado de máquina em comparação ao consumo médio de seres humanos.
 
-    ![Emissões de CO2 para treinamento de modelos de machine learning | 650](../6%20-%20Anexos/emissoes_co2_llms.png)
+    ![Emissões de CO2 para treinamento de modelos de machine learning | 650](../6%20-%20Anexos/iris-ml-01-emissoes_co2_llms.png)
     *Emissões de CO2 para treinamento de modelos de machine learning*. Fonte: <https://aiindex.stanford.edu/report/>.
 
 <!-- Vertical separator -->
@@ -123,7 +123,7 @@ Todas as interações na internet geram dados. Com ML e DL, dados passam a se to
 
 ## Aprendizado e tarefas em Machine Learning
 
-![Programação tradicional x aprendizado de máquina | 650](../6%20-%20Anexos/prog_tradicional_x_ml.png)
+![Programação tradicional x aprendizado de máquina | 650](../6%20-%20Anexos/iris-ml-01-prog_tradicional_x_ml.png)
 *Programação tradicional x Aprendizado de máquina*. Fonte: slides do curso.
 
 ```ad-note
@@ -132,7 +132,7 @@ Em aprendizado de máquina, a geração de regras ocorre apenas durante o **trei
 
 ### Paradigmas de aprendizado
 
-![Paradigmas de aprendizado de máquina | 650](../6%20-%20Anexos/paradigmas_ml.png)
+![Paradigmas de aprendizado de máquina | 650](../6%20-%20Anexos/iris-ml-01-paradigmas_de_ml-1.png)
 *Paradigmas de aprendizado de máquina*. Fonte: <https://www.researchgate.net/figure/The-main-types-of-machine-learning-Main-approaches-include-classification-and-regression_fig1_354960266>.
 
 - No **aprendizado supervisionado** (*supervised learning*), tenho as respostas e quero gerar algum tipo de predição quando recebo novos dados.
@@ -143,14 +143,14 @@ Em aprendizado de máquina, a geração de regras ocorre apenas durante o **trei
 **Dados anotados:** uma anotação em um dado é a resposta esperada real ("*ground truth*").
 ```
 
-![Processo de aprendizado nos diferentes paradigmas | 650](../6%20-%20Anexos/aprendizado_ml.png)
+![Processo de aprendizado nos diferentes paradigmas | 650](../6%20-%20Anexos/iris-ml-01-paradigmas-de-ml-2.png)
 *Processo de aprendizado nos diferentes paradigmas*. Fonte: <https://www.researchgate.net/figure/Main-learning-paradigms-of-Machine-Learning_fig2_339895075>.
 
 Além do aprendizado supervisionado e não-supervisionado, existe também o **aprendizado auto-supervisionado** (surgido na última década), muito importante em sistemas de *deep learning* e fundamental para a existência de LLMs. Nele, tenho apenas os dados sem as saídas esperadas (mas uma quantidade colossal de dados) e quero extrair algum tipo de conhecimento sobre eles. O processo de aprendizado ocorre de forma similar ao aprendizado supervisionado, mas agora **a saída esperada é a própria entrada original**.
 
 Por exemplo, dada uma imagem, um pedaço dessa imagem é recortado e a tarefa do modelo é reconstruir o trecho removido; a imagem reconstruída é então comparada com a imagem original para medir o desempenho do modelo. Esse procedimento também pode ser realizado com texto: dado um trecho de uma frase, o modelo tem como objetivo prever qual será próxima palavra, por exemplo.
 
-![Aprendizado Auto-supervisionado | 650](../6%20-%20Anexos/self_supervised.png)
+![Aprendizado Auto-supervisionado | 650](../6%20-%20Anexos/iris-ml-01-self_supervised_learning.png)
 *Aprendizado Auto-supervisionado*. Fonte: slides do curso.
 
 ```ad-tldr
@@ -168,7 +168,7 @@ Por exemplo, dada uma imagem, um pedaço dessa imagem é recortado e a tarefa do
 
 ### Tarefas em Machine Learning
 
-![Tarefas em aprendizado de máquina | 750](../6%20-%20Anexos/tarefas_ml.png)
+![Tarefas em aprendizado de máquina | 750](../6%20-%20Anexos/iris-ml-01-tarefas_em_ml.png)
 *Tarefas em aprendizado de máquina*. Fonte: <https://subscription.packtpub.com/book/data/9781789345070/1/ch01lvl1sec04/ml-tasks>.
 
 ## Exercícios de revisão (atividade prática)
