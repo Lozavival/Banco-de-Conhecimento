@@ -330,7 +330,19 @@ Também é possível utilizar imagens como link. Para isso, basta inserir a imag
 [![texto-alternativo](link-da-imagem)](link-de-redirecionamento)
 ```
 
-Por fim, Markdown não possui sintaxe para especificar as dimensões de uma imagem; caso isso seja necessário, utilize a tag padrão `<img>` do HTML.
+Por padrão, o Markdown não possui sintaxe para especificar as dimensões de uma imagem; caso isso seja necessário, utilize a tag padrão `<img>` do HTML. O Obsidian, porém, permite especificar o comprimento e altura de uma imagem utilizando um caractere de "pipe" (`|`) seguido pelas dimensões desejadas, após o texto alternativo:
+
+```markdown
+![[link-da-imagem | comprimento x altura]]
+![text-alternativo | comprimento x altura](link-da-imagem)
+```
+
+Alternativamente, também é possível especificar apenas o comprimento (nesse caso, a imagem será redimensionada automaticamente mantendo a proporção original):
+
+```markdown
+![[link-da-imagem | comprimento]]
+![text-alternativo | comprimento](link-da-imagem)
+```
 
 ### Notas de Rodapé (Obsidian only)
 
@@ -420,3 +432,5 @@ ___________
 ["Every USEFUL Markdown Syntax That I Use in Obsidian" - FromSergio](https://www.youtube.com/watch?v=d8fXEhWy_rY)
 
 <https://www.youtube.com/watch?v=_PPWWRV6gbA>
+
+["How to Adjust Image Size in Obsidian"](https://medium.com/@xjourney/how-to-adjust-image-size-in-obsidian-fe26985d92e5)
