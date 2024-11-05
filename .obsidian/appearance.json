@@ -2,6 +2,6 @@
   "accentColor": "",
   "baseFontSize": 16,
   "translucency": false,
-  "baseFontSizeAction": true,
+  "baseFontSizeAction": false,
   "showViewHeader": true
 }

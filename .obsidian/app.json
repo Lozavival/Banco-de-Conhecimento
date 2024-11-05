@@ -2,7 +2,7 @@
   "readableLineLength": false,
   "showFrontmatter": false,
   "showLineNumber": true,
-  "spellcheck": false,
+  "spellcheck": true,
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
   "showInlineTitle": false,
