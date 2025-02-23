@@ -4,5 +4,6 @@
   "templater-obsidian",
   "obsidian-vimrc-support",
   "obsidian-admonition",
-  "code-styler"
+  "code-styler",
+  "obsidian-relative-line-numbers"
 ]
