@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "abntex",
+        "acabativa",
         "Acad",
         "adipiscing",
         "amax",
@@ -15,7 +16,9 @@
         "atleast",
         "beamer",
         "bhaskara",
+        "Bonin",
         "boolalpha",
+        "Brené",
         "cbrt",
         "cerr",
         "chkfinite",
@@ -58,6 +61,7 @@
         "hstack",
         "hypot",
         "icontains",
+        "Ikigai",
         "inserí",
         "interp",
         "iomanip",
@@ -75,6 +79,7 @@
         "isreal",
         "isrealobj",
         "Koentopp",
+        "Köhler",
         "kwargs",
         "laoreet",
         "ldexp",
@@ -85,6 +90,7 @@
         "modf",
         "mrdivide",
         "mtimes",
+        "NACE",
         "nanquantile",
         "ndarray",
         "ndarrays",
@@ -106,9 +112,12 @@
         "repr",
         "rint",
         "roundb",
+        "Saïd",
         "Santanchè",
+        "Schippers",
         "scipy",
         "sinc",
+        "SOST",
         "sprintf",
         "structs",
         "tcsh",
@@ -124,6 +133,9 @@
         "vsplit",
         "vstack",
         "Weigend",
-        "wisi"
+        "wisi",
+        "WOOP",
+        "Yasmin",
+        "Zaltman"
     ]
 }
